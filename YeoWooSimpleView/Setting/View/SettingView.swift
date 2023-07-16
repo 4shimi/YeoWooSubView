@@ -11,7 +11,13 @@ struct SettingView: View {
     @State private var name = "노루궁뎅이"
     @State private var role = "norubutt"
     private var myImage = "Noru"
+    //사진 촬영 알림 토글
     @State private var notiToggle = true
+    //회원탈퇴 alert
+    @State private var deletingAccount = false
+    //로그아웃  action sheet
+    @State private var logOutSheet = false
+    
     
     var body: some View {
         NavigationStack {
@@ -98,37 +104,55 @@ struct SettingView: View {
                 
                 //회원탈퇴/탈퇴
                 VStack{
-
-                        VStack {
-                            NavigationLink{
-                                
+                            Button{
+                                deletingAccount = true
                             } label: {
                                     Text("회원 탈퇴")
                                         .font(.system(size: 18, weight: .bold, design: .default))
-                                        .foregroundColor(Color(red: 255 / 255, green: 52 / 255, blue: 100 / 255))
+                                        .foregroundColor(Color.warningRed)
                         }
-                            .padding(.bottom, 10)
-                        }.frame(width: UIScreen.main.bounds.width - 30, height: 54)
+                        .frame(width: UIScreen.main.bounds.width - 30, height: 54)
                         .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .fill(Color(red: 249 / 255, green: 249 / 255, blue: 249 / 255)))
+                    //탈퇴 alert
+                        .alert(isPresented: $deletingAccount) {
+                            Alert(
+                                title: Text("회원 탈퇴"),
+                                message: Text("탈퇴시 사진 복구가 불가능합니다. 정말 탈퇴하시겠습니까?"),
+                                primaryButton: .default(Text("탈퇴"),
+                                                        action: {
+                                                  //탈퇴코드
+                                    
+                                                }),
+                                                secondaryButton: .cancel(Text("취소"))
+                            )
+                        }
 
                     
                     
-                    VStack {
-                        NavigationLink{
-                            
+                        Button{
+                            logOutSheet = true
                         } label: {
                                 Text("로그아웃")
                                     .font(.system(size: 18, weight: .bold, design: .default))
                                     .foregroundColor(Color(red: 100 / 255, green: 100 / 255, blue: 100 / 255))
                     }
-                        .padding(.bottom, 10)
-                    }.frame(width: UIScreen.main.bounds.width - 30, height: 54)
+                        .frame(width: UIScreen.main.bounds.width - 30, height: 54)
                         .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .fill(Color(red: 249 / 255, green: 249 / 255, blue: 249 / 255)))
+                    //로그아웃 시트
+                        .actionSheet(isPresented: $logOutSheet) {
+                            ActionSheet(title: Text("로그아웃"),
+                            message: Text("정말로 로그아웃하시겠습니까?"),
+                                        buttons: [
+                                            .destructive(Text("로그아웃")) { print("User logged out.") },
+                                      .cancel(Text("취소"))])
+                        }
 
                     
                 }
+
+                
                 
             }
             .navigationTitle("설정")

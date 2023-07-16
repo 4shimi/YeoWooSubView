@@ -14,6 +14,7 @@ struct ProfileSettingView: View {
     @State private var selectedImage: PhotosPickerItem?
     @State private var nickName = ""
     @State private var identity = ""
+    @State private var sameID = false
     
     var body: some View {
         VStack{
@@ -21,6 +22,7 @@ struct ProfileSettingView: View {
             //selecting profile picture (사진 수정 버튼)
             PhotosPicker(selection:  $selectedImage) {
                 ZStack{
+                    //내사진
                     Image(myImage)
                         .resizable()
                         .scaledToFill()
@@ -28,6 +30,7 @@ struct ProfileSettingView: View {
                         .background(Color.mainColor)
                         .clipShape(Circle())
                         .padding(.horizontal, 10 )
+                    //카메라 모양
                     Circle()
                         .frame(width: 30, height: 30)
                         .foregroundColor(Color(red: 243 / 255, green: 243 / 255, blue: 243 / 255))
@@ -58,6 +61,29 @@ struct ProfileSettingView: View {
                 .padding(.trailing, 10)
             }
             .padding(.horizontal)
+            
+            
+            sameID ?
+            Text("사용하실 수 있는 아이디입니다.")
+                .font(.footnote)
+                .foregroundColor(Color.mainColor) :
+            Text("사용하실 수 없는 아이디입니다.")
+                .font(.footnote)
+                .foregroundColor(Color.warningRed)
+            
+            Spacer()
+            
+            Button{
+                dismiss()
+            } label: {
+                    Text("저장하기")
+                        .font(.system(size: 18, weight: .bold, design: .default))
+                        .foregroundColor(Color.white)
+        }
+        .frame(width: UIScreen.main.bounds.width - 30, height: 54)
+        .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
+            .fill(Color.mainColor))
+
             
 
         }
