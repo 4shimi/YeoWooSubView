@@ -9,8 +9,8 @@ import SwiftUI
 
 
 struct CardViewModifier: ViewModifier {
-    //default 값 65 설정
-    var height: CGFloat = 64
+    //default 값 66 설정
+    var height: CGFloat = 66
     
     func body(content: Content) -> some View {
         content

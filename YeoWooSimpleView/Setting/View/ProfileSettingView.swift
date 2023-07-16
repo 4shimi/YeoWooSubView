@@ -93,7 +93,8 @@ struct ProfileSettingView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading){
                 Image(systemName: "chevron.left")
-                    .imageScale(.large )
+                    .opacity(0.3)
+                    .imageScale(.large)
                     .onTapGesture {
                         dismiss()
                     }

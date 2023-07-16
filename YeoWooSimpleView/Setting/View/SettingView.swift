@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingView: View {
+    @Environment(\.dismiss) var dismiss
     @State private var name = "노루궁뎅이"
     @State private var role = "norubutt"
     private var myImage = "Noru"
@@ -16,7 +17,7 @@ struct SettingView: View {
     //회원탈퇴 alert
     @State private var deletingAccount = false
     //로그아웃  action sheet
-    @State private var logOutSheet = false
+    @State private var loggingOutSheet = false
     
     
     var body: some View {
@@ -102,8 +103,9 @@ struct SettingView: View {
                 
                 Spacer()
                 
-                //회원탈퇴/탈퇴
+                //회원탈퇴/로그아웃
                 VStack{
+                    //회원탈퇴
                             Button{
                                 deletingAccount = true
                             } label: {
@@ -119,19 +121,19 @@ struct SettingView: View {
                             Alert(
                                 title: Text("회원 탈퇴"),
                                 message: Text("탈퇴시 사진 복구가 불가능합니다. 정말 탈퇴하시겠습니까?"),
-                                primaryButton: .default(Text("탈퇴"),
+                                primaryButton: .destructive(Text("탈퇴")
+                                    .foregroundColor(.warningRed),
                                                         action: {
                                                   //탈퇴코드
-                                    
                                                 }),
                                                 secondaryButton: .cancel(Text("취소"))
                             )
                         }
 
                     
-                    
+                    //로그아웃
                         Button{
-                            logOutSheet = true
+                            loggingOutSheet = true
                         } label: {
                                 Text("로그아웃")
                                     .font(.system(size: 18, weight: .bold, design: .default))
@@ -141,12 +143,13 @@ struct SettingView: View {
                         .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .fill(Color(red: 249 / 255, green: 249 / 255, blue: 249 / 255)))
                     //로그아웃 시트
-                        .actionSheet(isPresented: $logOutSheet) {
+                        .actionSheet(isPresented: $loggingOutSheet) {
                             ActionSheet(title: Text("로그아웃"),
                             message: Text("정말로 로그아웃하시겠습니까?"),
                                         buttons: [
                                             .destructive(Text("로그아웃")) { print("User logged out.") },
-                                      .cancel(Text("취소"))])
+                                      .cancel(Text("취소"))
+                                        ])
                         }
 
                     
@@ -159,6 +162,16 @@ struct SettingView: View {
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
             .accentColor(.black)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading){
+                    Image(systemName: "chevron.left")
+                        .opacity(0.7)
+                        .imageScale(.large )
+                        .onTapGesture {
+                            dismiss()
+                        }
+                }
+            }
             
             
         }

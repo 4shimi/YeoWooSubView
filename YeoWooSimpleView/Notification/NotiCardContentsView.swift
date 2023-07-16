@@ -10,7 +10,7 @@ import SwiftUI
 struct NotiCardContentsView: View {
     
     @State private var buddyName = "Pin"
-    @State private var buddyImage = "Pin"
+    @State private var buddyImage = "Character"
     @State private var travelPlace = "제주도"
     
     
@@ -22,14 +22,16 @@ struct NotiCardContentsView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 42, height: 42)
-                .background(Color.mainColor)
                 .clipShape(Circle())
-                .padding(.horizontal, 10 )
+                .padding(.horizontal, 12 )
             
             HStack{
                 VStack(alignment: .leading){
-                    Text("\(buddyName)이 \(travelPlace) 여행에 초대했어요")
-                        .font(.headline)
+                    Text("From. \(buddyName)").font((.system(size: 12, weight: .semibold, design: .default)))
+                        .foregroundColor(.gray)
+                    Text("\(travelPlace) 여행에 초대했어요")
+                        .font((.system(size: 15, weight: .regular, design: .default)))
+                        .foregroundColor(.black)
                     
                 }
                 

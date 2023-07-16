@@ -10,10 +10,9 @@ import SwiftUI
 struct IGTextFieldModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.title2)
+            .font(.system(size: 18, weight: .semibold, design: .default))
             .foregroundColor(.black)
             .opacity(0.5)
-            .fontWeight(.bold)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, 20)
             .padding(.top, 20)

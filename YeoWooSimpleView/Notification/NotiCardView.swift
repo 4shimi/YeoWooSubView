@@ -17,13 +17,13 @@ struct NotiCardView: View {
             HStack{
                 NotiCardContentsView()
             }
-            .modifier(CardViewModifier(height: CGFloat(65 * dayNotiNum)))
+            .modifier(CardViewModifier(height: CGFloat(66 * dayNotiNum)))
             .accentColor(.black)
     }
 }
 
 struct NotiCardView_Previews: PreviewProvider {
     static var previews: some View {
-        NotiCardView(dayNotiNum: 3)
+        NotiCardView(dayNotiNum: 1)
     }
 }
