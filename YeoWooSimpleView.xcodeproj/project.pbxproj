@@ -22,6 +22,8 @@
 		D57ED2D22A61711400670C31 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2D12A61711400670C31 /* Font.swift */; };
 		D57ED2D42A6172B400670C31 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2D32A6172B400670C31 /* CardViewModifier.swift */; };
 		D57ED2D62A617E5B00670C31 /* NotiCardContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2D52A617E5B00670C31 /* NotiCardContentsView.swift */; };
+		D57ED2FA2A6438AC00670C31 /* ProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2F92A6438AC00670C31 /* ProfileSettingView.swift */; };
+		D57ED2FC2A64444A00670C31 /* EditProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2FB2A64444A00670C31 /* EditProfileRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		D57ED2D12A61711400670C31 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		D57ED2D32A6172B400670C31 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
 		D57ED2D52A617E5B00670C31 /* NotiCardContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiCardContentsView.swift; sourceTree = "<group>"; };
+		D57ED2F92A6438AC00670C31 /* ProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingView.swift; sourceTree = "<group>"; };
+		D57ED2FB2A64444A00670C31 /* EditProfileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +121,7 @@
 		D57ED2BD2A612EFE00670C31 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				D57ED2BE2A612F2000670C31 /* SettingView.swift */,
+				D57ED2F82A64389700670C31 /* View */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -144,8 +148,18 @@
 				D57ED2CD2A615B0000670C31 /* TextFieldModifier.swift */,
 				D57ED2D12A61711400670C31 /* Font.swift */,
 				D57ED2D32A6172B400670C31 /* CardViewModifier.swift */,
+				D57ED2FB2A64444A00670C31 /* EditProfileRowView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		D57ED2F82A64389700670C31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D57ED2BE2A612F2000670C31 /* SettingView.swift */,
+				D57ED2F92A6438AC00670C31 /* ProfileSettingView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,10 +241,12 @@
 				D57ED2C62A61306600670C31 /* RoleSelectView.swift in Sources */,
 				D57ED2D42A6172B400670C31 /* CardViewModifier.swift in Sources */,
 				D57ED2B02A612EBC00670C31 /* ContentView.swift in Sources */,
+				D57ED2FA2A6438AC00670C31 /* ProfileSettingView.swift in Sources */,
 				D57ED2CB2A61565700670C31 /* ColorModel.swift in Sources */,
 				D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */,
 				D57ED2D62A617E5B00670C31 /* NotiCardContentsView.swift in Sources */,
 				D57ED2C42A61305900670C31 /* InvitationView.swift in Sources */,
+				D57ED2FC2A64444A00670C31 /* EditProfileRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

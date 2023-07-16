@@ -10,20 +10,21 @@ import SwiftUI
 
 struct CardViewModifier: ViewModifier {
     //default 값 65 설정
-    var height: CGFloat = 65
+    var height: CGFloat = 64
     
     func body(content: Content) -> some View {
         content
             .frame(width: UIScreen.main.bounds.width - 30, height: height)
-            .background(RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .fill(.white)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(.gray, lineWidth: 1)
-                    .opacity(0.5)
-                    
-            )
+            .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(.white))
+            .shadow(color: Color.black.opacity(0.05), radius: 20, x: 0, y: 4)
+            
+//            .overlay(
+//                RoundedRectangle(cornerRadius: 20)
+//                    .stroke(.gray, lineWidth: 1)
+//                    .opacity(0.5)
+//
+//            )
     }
 }
     

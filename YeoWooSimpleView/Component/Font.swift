@@ -16,7 +16,6 @@ struct SubTitleFont: ViewModifier {
         content
             .font(.title2)
             .foregroundColor(.black)
-            .opacity(0.5)
             .fontWeight(.bold)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, 20)
