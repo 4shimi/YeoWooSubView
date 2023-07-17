@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */; };
+		D560E5FE2A6576FB00422B6C /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5FD2A6576FB00422B6C /* Travel.swift */; };
 		D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */; };
 		D57ED2B02A612EBC00670C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AF2A612EBC00670C31 /* ContentView.swift */; };
 		D57ED2B22A612EBE00670C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57ED2B12A612EBE00670C31 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToolBarModifier.swift; sourceTree = "<group>"; };
+		D560E5FD2A6576FB00422B6C /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		D57ED2AA2A612EBC00670C31 /* YeoWooSimpleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeoWooSimpleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeoWooSimpleViewApp.swift; sourceTree = "<group>"; };
 		D57ED2AF2A612EBC00670C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				D57ED2FE2A6521E600670C31 /* ScreenModel.swift */,
 				D57ED3002A65265E00670C31 /* User.swift */,
 				D57ED30A2A6551C800670C31 /* Fox.swift */,
+				D560E5FD2A6576FB00422B6C /* Travel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				D57ED2D42A6172B400670C31 /* CardViewModifier.swift in Sources */,
 				D57ED2B02A612EBC00670C31 /* ContentView.swift in Sources */,
 				D57ED2FA2A6438AC00670C31 /* ProfileSettingView.swift in Sources */,
+				D560E5FE2A6576FB00422B6C /* Travel.swift in Sources */,
 				D57ED2CB2A61565700670C31 /* ColorModel.swift in Sources */,
 				D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */,
 				D57ED2D62A617E5B00670C31 /* NotiCardContentsView.swift in Sources */,
