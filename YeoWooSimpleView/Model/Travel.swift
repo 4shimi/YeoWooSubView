@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Travel{
+struct Travel: Identifiable{
+    let id = UUID()
     let name: String
     var description: String
     var friendImage: String

@@ -9,29 +9,35 @@ import SwiftUI
 
 struct NotiCardView: View {
     @State var dayNotiNum: Int = 1
-    let travel : Travel
     
-    //NotiCardView생성날짜 저장
-
+    let travels : [Travel]
     
     var body: some View {
         
         VStack {
-            Text(travel.Date)
+            Text(travels.first?.Date ?? "None")
                 .font(.system(size: 18, weight: .bold, design: .default))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 20)
-            HStack{
-                    NotiCardContentsView(travel: travel)
+            
+            ForEach(Array(travels.enumerated()), id: \.element.id) { index, travel in
+                NotiCardContentsView(travel: travel)
+
+                // Check if current item is not the last one
+                if index != travels.count - 1 {
+                    Divider()
+                        .frame(width: UIScreen.width - 50)
                 }
-                .modifier(CardViewModifier(height: CGFloat(66 * dayNotiNum)))
-            .accentColor(.black)
+            }
         }
+        .padding(.bottom, 38)
+        .modifier(CardViewModifier(height: CGFloat(66 * dayNotiNum)))
+        .accentColor(.black)
     }
 }
 
 struct NotiCardView_Previews: PreviewProvider {
     static var previews: some View {
-        NotiCardView(dayNotiNum: 1, travel: travels[0])
+        NotiCardView(dayNotiNum: 1, travels: [travels[0]])
     }
 }

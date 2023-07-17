@@ -16,14 +16,21 @@ struct NotificationView: View {
     @State private var selectedIndex: Int? = nil
 
     var body: some View {
+        
+        //같은 날짜 배열값 딕셔너리
+        let groupedTravels = travels.reduce(into: [String: [Travel]]()) { result, travel in
+            result[travel.Date, default: []].append(travel)
+        }
+        
         NavigationStack{
             ScrollView{
 
                 LazyVStack(spacing: 32){
-                    ForEach(0..<5) { id in
-                        NotiCardView(travel: travels[id])
+                    ForEach(groupedTravels.keys.sorted(by: >), id: \.self) { date in // 최신 날짜부터 순서대로 보여주도록
+                        NotiCardView(dayNotiNum: groupedTravels[date]?.count ?? 1, travels: groupedTravels[date] ?? [])
                     }
                 }
+                .padding(.top, 55)
             }
             .navigationTitle("알림")
             .navigationBarTitleDisplayMode(.inline)
