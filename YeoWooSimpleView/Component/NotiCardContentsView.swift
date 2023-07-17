@@ -9,9 +9,7 @@ import SwiftUI
 
 struct NotiCardContentsView: View {
     
-    @State private var buddyName = "Pin"
-    @State private var buddyImage = "Character"
-    @State private var travelPlace = "제주도"
+    let travel : Travel
     
     
     var body: some View {
@@ -19,33 +17,29 @@ struct NotiCardContentsView: View {
             InvitationView()
                 .navigationBarBackButtonHidden()
         }label: {
-            Image(buddyImage)
+            Image(travel.friendImage)
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .frame(width: 42, height: 42)
                 .clipShape(Circle())
                 .padding(.horizontal, 12 )
             
             HStack{
                 VStack(alignment: .leading){
-                    Text("From. \(buddyName)").font((.system(size: 12, weight: .semibold, design: .default)))
+                    Text("From. \(travel.name)").font((.system(size: 12, weight: .semibold, design: .default)))
                         .foregroundColor(.gray)
-                    Text("\(travelPlace) 여행에 초대했어요")
+                    Text("\(travel.description)에 초대해요!")
                         .font((.system(size: 15, weight: .regular, design: .default)))
-                        .foregroundColor(.black)
-                    
+                        .foregroundColor(.black)    
                 }
                 
                 Spacer()
-                
-                Button{
-                    
-                } label: {
+
                     Image(systemName: "chevron.right")
                         .imageScale(.large)
                         .foregroundColor(.gray)
-                }
-                .padding(.trailing, 20)
+                        .opacity(0.3)
+                        .padding(.trailing, 20)
             }
         }
     }
@@ -53,6 +47,6 @@ struct NotiCardContentsView: View {
 
 struct NotiCardContentsView_Previews: PreviewProvider {
     static var previews: some View {
-        NotiCardContentsView()
+        NotiCardContentsView(travel: travels[0])
     }
 }

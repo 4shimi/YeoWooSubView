@@ -13,17 +13,17 @@ struct NotificationView: View {
     @State private var deletingAll = false
     @State private var deletingAlarm = false
     
+    @State private var selectedIndex: Int? = nil
 
     var body: some View {
         NavigationStack{
             ScrollView{
-                
-                //받은 날짜 표시
 
-                Text("2023. 07. 07")
-                    .modifier(SubTitleFont())
-
-                NotiCardView()
+                LazyVStack(spacing: 32){
+                    ForEach(0..<5) { id in
+                        NotiCardView(travel: travels[id])
+                    }
+                }
             }
             .navigationTitle("알림")
             .navigationBarTitleDisplayMode(.inline)

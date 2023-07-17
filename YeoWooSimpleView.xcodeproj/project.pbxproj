@@ -120,7 +120,6 @@
 			children = (
 				D57ED2C72A61307800670C31 /* NotificationView.swift */,
 				D57ED2CF2A616D1400670C31 /* NotiCardView.swift */,
-				D57ED2D52A617E5B00670C31 /* NotiCardContentsView.swift */,
 				D57ED3022A652C7100670C31 /* EmptyNotificationView.swift */,
 			);
 			path = Notification;
@@ -173,6 +172,7 @@
 				D57ED3042A653A1E00670C31 /* ProgressBar.swift */,
 				D57ED3082A65400300670C31 /* FoxCardView.swift */,
 				D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */,
+				D57ED2D52A617E5B00670C31 /* NotiCardContentsView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
