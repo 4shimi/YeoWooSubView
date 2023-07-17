@@ -60,8 +60,6 @@ struct ProfileSettingView: View {
                 }
                 .padding(.trailing, 10)
             }
-            .padding(.horizontal)
-            
             
             sameID ?
             Text("사용하실 수 있는 아이디입니다.")
@@ -89,6 +87,7 @@ struct ProfileSettingView: View {
         }
         .navigationTitle("프로필 수정하기")
         .navigationBarTitleDisplayMode(.inline)
+        .background(Color.white)
         .accentColor(.black)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading){

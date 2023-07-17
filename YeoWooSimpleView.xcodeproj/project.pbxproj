@@ -24,6 +24,7 @@
 		D57ED2D62A617E5B00670C31 /* NotiCardContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2D52A617E5B00670C31 /* NotiCardContentsView.swift */; };
 		D57ED2FA2A6438AC00670C31 /* ProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2F92A6438AC00670C31 /* ProfileSettingView.swift */; };
 		D57ED2FC2A64444A00670C31 /* EditProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2FB2A64444A00670C31 /* EditProfileRowView.swift */; };
+		D57ED2FF2A6521E600670C31 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2FE2A6521E600670C31 /* ScreenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		D57ED2D52A617E5B00670C31 /* NotiCardContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiCardContentsView.swift; sourceTree = "<group>"; };
 		D57ED2F92A6438AC00670C31 /* ProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingView.swift; sourceTree = "<group>"; };
 		D57ED2FB2A64444A00670C31 /* EditProfileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRowView.swift; sourceTree = "<group>"; };
+		D57ED2FE2A6521E600670C31 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D57ED2CA2A61565700670C31 /* ColorModel.swift */,
+				D57ED2FE2A6521E600670C31 /* ScreenModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				D57ED2CB2A61565700670C31 /* ColorModel.swift in Sources */,
 				D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */,
 				D57ED2D62A617E5B00670C31 /* NotiCardContentsView.swift in Sources */,
+				D57ED2FF2A6521E600670C31 /* ScreenModel.swift in Sources */,
 				D57ED2C42A61305900670C31 /* InvitationView.swift in Sources */,
 				D57ED2FC2A64444A00670C31 /* EditProfileRowView.swift in Sources */,
 			);
@@ -381,8 +385,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,8 +413,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

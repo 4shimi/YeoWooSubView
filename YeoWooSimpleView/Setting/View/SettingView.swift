@@ -115,7 +115,7 @@ struct SettingView: View {
                         }
                         .frame(width: UIScreen.main.bounds.width - 30, height: 54)
                         .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(Color(red: 249 / 255, green: 249 / 255, blue: 249 / 255)))
+                            .fill(Color.whiteGray))
                     //탈퇴 alert
                         .alert(isPresented: $deletingAccount) {
                             Alert(
@@ -141,7 +141,7 @@ struct SettingView: View {
                     }
                         .frame(width: UIScreen.main.bounds.width - 30, height: 54)
                         .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(Color(red: 249 / 255, green: 249 / 255, blue: 249 / 255)))
+                            .fill(Color.whiteGray))
                     //로그아웃 시트
                         .actionSheet(isPresented: $loggingOutSheet) {
                             ActionSheet(title: Text("로그아웃"),

@@ -16,7 +16,8 @@ struct NotiCardContentsView: View {
     
     var body: some View {
         NavigationLink{
-            
+            InvitationView()
+                .navigationBarBackButtonHidden()
         }label: {
             Image(buddyImage)
                 .resizable()

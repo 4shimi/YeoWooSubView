@@ -8,10 +8,141 @@
 import SwiftUI
 
 struct InvitationView: View {
+    @Environment(\.dismiss) var dismiss
+    var friend = "제임스"
+    var place = "제주도 여행"
+    @State private var opacityValues = [0.0, 0.0, 0.0, 0.0]
+    
+    //참가한 사람 -3 사람 수 표시
+    var number: Int = 2
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                VStack(alignment: .leading){
+                    Text("\(friend)님이 초대한")
+                    Text(place)
+                        .foregroundColor(.mainColor)
+                    + Text("에 참가하실래요?")
+                }
+                .font(.system(size: 24, weight: .bold, design: .default))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 20)
+                .padding(.top, 40)
+                
+                Spacer()
+                    .frame(height: 172)
+                ZStack(alignment: .center){
+                    ZStack{
+                        Circle()
+                            .frame(width: UIScreen.width/3-30, height: UIScreen.width/3-30)
+                            .foregroundColor(Color.white)
+                        Image("Nova")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: UIScreen.width/3-36, height: UIScreen.width/3-36)
+                            .clipShape(Circle())
+                    }
+                        .opacity(opacityValues[0])
+                        .offset(x: -70)
+                        
+                    ZStack{
+                        Circle()
+                            .frame(width: UIScreen.width/3-30, height: UIScreen.width/3-30)
+                            .foregroundColor(Color.white)
+                        Image("Azhy")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: UIScreen.width/3-36, height: UIScreen.width/3-36)
+                            .clipShape(Circle())
+                    }
+                    .opacity(opacityValues[1])
+                    ZStack{
+                        Circle()
+                            .frame(width: UIScreen.width/3-30, height: UIScreen.width/3-30)
+                            .foregroundColor(Color.white)
+                        Image("Jamie")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: UIScreen.width/3-36, height: UIScreen.width/3-36)
+                            .clipShape(Circle())
+                    }
+                    .opacity(opacityValues[2])
+                    .offset(x: 70)
+                    ZStack{
+                        Circle()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(Color.white)
+                        Circle()
+                            .frame(width: 34, height: 34)
+                            .foregroundColor(Color.whiteGray)
+                        Text("+\(number)")
+                            .foregroundColor(.noGray)
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                    }
+                    .opacity(opacityValues[3])
+                    .offset(x: 120, y: 30)
+                }
+                .onAppear {
+                    withAnimation(Animation.easeIn(duration: 1.0).delay(0.5)) {
+                        self.opacityValues[0] = 1.0
+                    }
+                    withAnimation(Animation.easeIn(duration: 1.0).delay(1.0)) {
+                        self.opacityValues[1] = 1.0
+                    }
+                    withAnimation(Animation.easeIn(duration: 1.0).delay(1.5)) {
+                        self.opacityValues[2] = 1.0
+                    }
+                    withAnimation(Animation.easeIn(duration: 1.0).delay(2.0)) {
+                        self.opacityValues[3] = 1.0
+                    }
+                }
+                
+                Spacer()
+                
+                HStack {
+                    Button{
+                        dismiss()
+                    } label: {
+                        Rectangle()
+                            .frame(width: UIScreen.main.bounds.width/2 - 30, height: 54)
+                            .foregroundColor(Color.whiteGray)
+                            .cornerRadius(10)
+                            .overlay(Text("아니요").font(.system(size: 18, weight: .bold, design: .default)).foregroundColor(Color.noGray))
+                    }
+                    Button{
+                        //참여 로직
+                        
+                    } label: {
+                        Rectangle()
+                            .frame(width: UIScreen.main.bounds.width/2 - 30, height: 54)
+                            .foregroundColor(Color.mainColor)
+                            .cornerRadius(10)
+                            .overlay(Text("참가할게요").font(.system(size: 18, weight: .bold, design: .default)).foregroundColor(Color.white))
+                    }
+                    
+                }
+                .padding(.bottom, 20)
+            }
+            .navigationTitle("설정")
+            .navigationBarTitleDisplayMode(.inline)
+            .background(Color.white)
+            .accentColor(.black)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading){
+                    Image(systemName: "chevron.left")
+                        .opacity(0.7)
+                        .imageScale(.large )
+                        .onTapGesture {
+                            dismiss()
+                        }
+                }
+        }
+        }
     }
 }
+
 
 struct InvitationView_Previews: PreviewProvider {
     static var previews: some View {
