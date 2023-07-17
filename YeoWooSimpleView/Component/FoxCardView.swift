@@ -19,6 +19,12 @@ struct FoxCardView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: 108, height: 108)
                     .foregroundColor(selectedFox ? .clicked : .whiteGray)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(lineWidth: 1.5)
+                            .foregroundColor(selectedFox ? .mainColor : .clear)
+                    }
+                
                     
                 
                 VStack {
