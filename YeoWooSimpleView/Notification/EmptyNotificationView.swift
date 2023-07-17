@@ -1,29 +1,23 @@
 //
-//  NotificationView.swift
+//  EmptyNotificationView.swift
 //  YeoWooSimpleView
 //
-//  Created by 정회승 on 2023/07/14.
+//  Created by 정회승 on 2023/07/17.
 //
 
 import SwiftUI
-import UIKit
 
-struct NotificationView: View {
+struct EmptyNotificationView: View {
     @Environment(\.dismiss) var dismiss
     @State private var deletingAll = false
     @State private var deletingAlarm = false
-    
 
     var body: some View {
         NavigationStack{
-            ScrollView{
-                
-                //받은 날짜 표시
-
-                Text("2023. 07. 07")
-                    .modifier(SubTitleFont())
-
-                NotiCardView()
+            VStack{
+                Text("알림이 비어있어요")
+                    .font(.system(size: 20, weight: .bold, design: .default))
+                    .foregroundColor(.alarmGray)
             }
             .navigationTitle("알림")
             .navigationBarTitleDisplayMode(.inline)
@@ -65,7 +59,6 @@ struct NotificationView: View {
                         .foregroundColor(.warningRed),
                                             action: {
                                       //삭제코드
-                                                
                                     }),
                                     secondaryButton: .cancel(Text("취소"))
                 )
@@ -75,8 +68,8 @@ struct NotificationView: View {
     }
 }
 
-struct NotificationView_Previews: PreviewProvider {
+struct EmptyNotificationView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationView()
+        EmptyNotificationView()
     }
 }

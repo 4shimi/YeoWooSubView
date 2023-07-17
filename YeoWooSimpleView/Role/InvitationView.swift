@@ -17,8 +17,19 @@ struct InvitationView: View {
     var number: Int = 2
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack {
+                HStack (spacing: 0){
+                    Rectangle()
+                        .frame(width: (UIScreen.width - 50)/2, height: 3)
+                        .padding(.top, 15)
+                    .foregroundColor(.mainColor)
+                    Rectangle()
+                        .frame(width: (UIScreen.width - 50)/2, height: 3)
+                        .padding(.top, 15)
+                        .foregroundColor(.mainColor)
+                        .opacity(0.1)
+                }
                 VStack(alignment: .leading){
                     Text("\(friend)님이 초대한")
                     Text(place)
@@ -29,10 +40,11 @@ struct InvitationView: View {
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 20)
-                .padding(.top, 40)
+                .padding(.top, 30)
                 
                 Spacer()
                     .frame(height: 172)
+                //초대된 사람들(나중에 카드로 뺄 예정)
                 ZStack(alignment: .center){
                     ZStack{
                         Circle()
@@ -84,23 +96,10 @@ struct InvitationView: View {
                     .opacity(opacityValues[3])
                     .offset(x: 120, y: 30)
                 }
-                .onAppear {
-                    withAnimation(Animation.easeIn(duration: 1.0).delay(0.5)) {
-                        self.opacityValues[0] = 1.0
-                    }
-                    withAnimation(Animation.easeIn(duration: 1.0).delay(1.0)) {
-                        self.opacityValues[1] = 1.0
-                    }
-                    withAnimation(Animation.easeIn(duration: 1.0).delay(1.5)) {
-                        self.opacityValues[2] = 1.0
-                    }
-                    withAnimation(Animation.easeIn(duration: 1.0).delay(2.0)) {
-                        self.opacityValues[3] = 1.0
-                    }
-                }
                 
                 Spacer()
                 
+                // 버튼
                 HStack {
                     Button{
                         dismiss()
@@ -111,8 +110,10 @@ struct InvitationView: View {
                             .cornerRadius(10)
                             .overlay(Text("아니요").font(.system(size: 18, weight: .bold, design: .default)).foregroundColor(Color.noGray))
                     }
-                    Button{
+                    NavigationLink{
                         //참여 로직
+                        RoleSelectView()
+                            .navigationBarBackButtonHidden()
                         
                     } label: {
                         Rectangle()
@@ -125,8 +126,6 @@ struct InvitationView: View {
                 }
                 .padding(.bottom, 20)
             }
-            .navigationTitle("설정")
-            .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
             .accentColor(.black)
             .toolbar {
@@ -139,6 +138,21 @@ struct InvitationView: View {
                         }
                 }
         }
+            .onAppear {
+                withAnimation(Animation.easeIn(duration: 1.0).delay(0.5)) {
+                    self.opacityValues[0] = 1.0
+                }
+                withAnimation(Animation.easeIn(duration: 1.0).delay(1.0)) {
+                    self.opacityValues[1] = 1.0
+                }
+                withAnimation(Animation.easeIn(duration: 1.0).delay(1.5)) {
+                    self.opacityValues[2] = 1.0
+                }
+                withAnimation(Animation.easeIn(duration: 1.0).delay(2.0)) {
+                    self.opacityValues[3] = 1.0
+                }
+            }
+
         }
     }
 }
