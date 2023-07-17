@@ -12,12 +12,12 @@ struct InvitationView: View {
     var friend = "제임스"
     var place = "제주도 여행"
     @State private var opacityValues = [0.0, 0.0, 0.0, 0.0]
+
     
     //참가한 사람 -3 사람 수 표시
-    var number: Int = 2
+    var number: Int = users.count
     
     var body: some View {
-        NavigationView {
             VStack {
                 HStack (spacing: 0){
                     Rectangle()
@@ -50,7 +50,7 @@ struct InvitationView: View {
                         Circle()
                             .frame(width: UIScreen.width/3-30, height: UIScreen.width/3-30)
                             .foregroundColor(Color.white)
-                        Image("Nova")
+                        Image(users[0].profileImageUrl)
                             .resizable()
                             .scaledToFill()
                             .frame(width: UIScreen.width/3-36, height: UIScreen.width/3-36)
@@ -63,7 +63,7 @@ struct InvitationView: View {
                         Circle()
                             .frame(width: UIScreen.width/3-30, height: UIScreen.width/3-30)
                             .foregroundColor(Color.white)
-                        Image("Azhy")
+                        Image(users[1].profileImageUrl)
                             .resizable()
                             .scaledToFill()
                             .frame(width: UIScreen.width/3-36, height: UIScreen.width/3-36)
@@ -74,7 +74,7 @@ struct InvitationView: View {
                         Circle()
                             .frame(width: UIScreen.width/3-30, height: UIScreen.width/3-30)
                             .foregroundColor(Color.white)
-                        Image("Jamie")
+                        Image(users[2].profileImageUrl)
                             .resizable()
                             .scaledToFill()
                             .frame(width: UIScreen.width/3-36, height: UIScreen.width/3-36)
@@ -89,7 +89,7 @@ struct InvitationView: View {
                         Circle()
                             .frame(width: 34, height: 34)
                             .foregroundColor(Color.whiteGray)
-                        Text("+\(number)")
+                        Text("+\(number - 3)")
                             .foregroundColor(.noGray)
                             .font(.system(size: 20, weight: .bold, design: .default))
                     }
@@ -143,8 +143,6 @@ struct InvitationView: View {
                     self.opacityValues[3] = 1.0
                 }
             }
-
-        }
     }
 }
 

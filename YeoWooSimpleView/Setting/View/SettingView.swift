@@ -21,7 +21,6 @@ struct SettingView: View {
     
     
     var body: some View {
-        NavigationStack {
             //VStack 뷰
             VStack{
                 //프로필 뷰
@@ -163,10 +162,6 @@ struct SettingView: View {
             .background(Color.white)
             .accentColor(.black)
             .modifier(BackToolBarModifier())
-            
-            
-        }
-        
     }
 }
 

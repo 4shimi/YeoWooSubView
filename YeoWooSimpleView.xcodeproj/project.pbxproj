@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */; };
 		D560E5FE2A6576FB00422B6C /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5FD2A6576FB00422B6C /* Travel.swift */; };
+		D560E6002A65B4E800422B6C /* RoleChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5FF2A65B4E800422B6C /* RoleChangeView.swift */; };
 		D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */; };
 		D57ED2B02A612EBC00670C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AF2A612EBC00670C31 /* ContentView.swift */; };
 		D57ED2B22A612EBE00670C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57ED2B12A612EBE00670C31 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToolBarModifier.swift; sourceTree = "<group>"; };
 		D560E5FD2A6576FB00422B6C /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
+		D560E5FF2A65B4E800422B6C /* RoleChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChangeView.swift; sourceTree = "<group>"; };
 		D57ED2AA2A612EBC00670C31 /* YeoWooSimpleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeoWooSimpleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeoWooSimpleViewApp.swift; sourceTree = "<group>"; };
 		D57ED2AF2A612EBC00670C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				D57ED2C32A61305900670C31 /* InvitationView.swift */,
 				D57ED2C52A61306600670C31 /* RoleSelectView.swift */,
+				D560E5FF2A65B4E800422B6C /* RoleChangeView.swift */,
 			);
 			path = Role;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				D57ED2BF2A612F2000670C31 /* SettingView.swift in Sources */,
 				D57ED3052A653A1E00670C31 /* ProgressBar.swift in Sources */,
+				D560E6002A65B4E800422B6C /* RoleChangeView.swift in Sources */,
 				D57ED30B2A6551C800670C31 /* Fox.swift in Sources */,
 				D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */,
 				D57ED2D22A61711400670C31 /* Font.swift in Sources */,

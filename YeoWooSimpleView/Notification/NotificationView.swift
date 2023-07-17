@@ -22,10 +22,8 @@ struct NotificationView: View {
             result[travel.Date, default: []].append(travel)
         }
         
-        NavigationStack{
             ScrollView{
-
-                LazyVStack(spacing: 32){
+                LazyVStack(spacing: 70){
                     ForEach(groupedTravels.keys.sorted(by: >), id: \.self) { date in // 최신 날짜부터 순서대로 보여주도록
                         NotiCardView(dayNotiNum: groupedTravels[date]?.count ?? 1, travels: groupedTravels[date] ?? [])
                     }
@@ -47,7 +45,8 @@ struct NotificationView: View {
                 ToolbarItem(placement: .navigationBarTrailing){
                     Menu {
                         Button(role: .destructive, action: {
-                            print ("delete all")
+//                            print ("delete all")
+                            print(groupedTravels)
                             deletingAlarm = true
                             
                         }) {
@@ -77,8 +76,6 @@ struct NotificationView: View {
                                     secondaryButton: .cancel(Text("취소"))
                 )
             }
-        }
-        
     }
 }
 

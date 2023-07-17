@@ -16,9 +16,10 @@ struct NotiCardView: View {
         
         VStack {
             Text(travels.first?.Date ?? "None")
-                .font(.system(size: 18, weight: .bold, design: .default))
+                .font(.system(size: 18, weight: .semibold, design: .default))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 20)
+                .padding(.bottom, 20)
             
             ForEach(Array(travels.enumerated()), id: \.element.id) { index, travel in
                 NotiCardContentsView(travel: travel)
@@ -30,8 +31,8 @@ struct NotiCardView: View {
                 }
             }
         }
-        .padding(.bottom, 38)
-        .modifier(CardViewModifier(height: CGFloat(66 * dayNotiNum)))
+        .padding(.bottom, 49)
+        .modifier(CardViewModifier(height: CGFloat(65 * dayNotiNum)))
         .accentColor(.black)
     }
 }

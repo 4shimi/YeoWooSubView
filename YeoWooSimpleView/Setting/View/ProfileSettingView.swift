@@ -14,7 +14,7 @@ struct ProfileSettingView: View {
     @State private var selectedImage: PhotosPickerItem?
     @State private var nickName = ""
     @State private var identity = ""
-    @State private var sameID = false
+    @State private var sameID:Bool? = nil
     
     var body: some View {
         VStack{
@@ -48,7 +48,13 @@ struct ProfileSettingView: View {
             ZStack(alignment: .trailing) {
                 EditProfileRowView(Profile: "아이디", placeholder: "아이디를 써주세요", text: $identity)
                 Button{
-                    
+                    //(need 파베 logic)
+                    if !identity.isEmpty {
+                        sameID = true
+                    } else {
+                        sameID = false
+                    }
+                    print(identity)
                 }label:
                     { Text("중복확인")
                         .font(.system(size: 14, weight: .semibold, design: .default))
@@ -61,13 +67,15 @@ struct ProfileSettingView: View {
                 .padding(.trailing, 10)
             }
             
-            sameID ?
-            Text("사용하실 수 있는 아이디입니다.")
-                .font(.footnote)
-                .foregroundColor(Color.mainColor) :
-            Text("사용하실 수 없는 아이디입니다.")
-                .font(.footnote)
-                .foregroundColor(Color.warningRed)
+            if let isSameID = sameID {
+                isSameID ?
+                Text("사용하실 수 있는 아이디입니다.")
+                    .font(.footnote)
+                    .foregroundColor(Color.mainColor) :
+                Text("사용하실 수 없는 아이디입니다.")
+                    .font(.footnote)
+                    .foregroundColor(Color.warningRed)
+            }
             
             Spacer()
             
