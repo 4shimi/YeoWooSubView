@@ -162,16 +162,7 @@ struct SettingView: View {
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
             .accentColor(.black)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading){
-                    Image(systemName: "chevron.left")
-                        .opacity(0.7)
-                        .imageScale(.large )
-                        .onTapGesture {
-                            dismiss()
-                        }
-                }
-            }
+            .modifier(BackToolBarModifier())
             
             
         }

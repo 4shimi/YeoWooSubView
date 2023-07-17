@@ -12,6 +12,8 @@ struct RoleSelectView: View {
     @Environment(\.dismiss) var dismiss
     @State var selectingFox = false
     @State var progressBar = false
+    //선택된 여우 번호
+    @State private var selectedIndex: Int? = nil
     
     //그리드 아이템
     private let gridItems: [GridItem] = [
@@ -43,7 +45,11 @@ struct RoleSelectView: View {
                 //FoxGrid 3x2
                 LazyVGrid(columns: gridItems, spacing: 30) {
                     ForEach(0..<6) { id in
-                        FoxCardView(fox: foxs[id])
+                        FoxCardView(fox: foxs[id], isSelected: selectedIndex == id)
+                            .onTapGesture {
+                                //한번 더 누르면 해제
+                                selectedIndex = selectedIndex == id ? nil : id
+                            }
                     }
                 }
                 
@@ -52,36 +58,37 @@ struct RoleSelectView: View {
 
 
                 // 버튼
+                if selectedIndex != nil {
                     Button{
-                        //선택 완료
-                        print("selecting finished")
-                        
-                        
-                    } label: {
+                            //선택 완료(선택된 selectedIndex 넘기기)
+                        print("selected fox is number \(selectedIndex ?? -1)")
+                            
+                            
+                        } label: {
+                            Rectangle()
+                                .frame(width: UIScreen.main.bounds.width - 30, height: 54)
+                                .foregroundColor(Color.mainColor)
+                                .cornerRadius(10)
+                                .overlay(Text("선택완료").font(.system(size: 18, weight: .bold, design: .default)).foregroundColor(Color.white))
+                                .padding(.bottom, 20)
+                        }
+                    
+                } else {
                         Rectangle()
                             .frame(width: UIScreen.main.bounds.width - 30, height: 54)
-                            .foregroundColor(Color.mainColor)
+                            .foregroundColor(Color.unclicked)
                             .cornerRadius(10)
                             .overlay(Text("선택완료").font(.system(size: 18, weight: .bold, design: .default)).foregroundColor(Color.white))
-                    }
-                .padding(.bottom, 20)
+                            .padding(.bottom, 20)
+                }
             }
             .navigationTitle(Text("역할 선택하기"))
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
             .accentColor(.black)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading){
-                    Image(systemName: "chevron.left")
-                        .opacity(0.7)
-                        .imageScale(.large )
-                        .onTapGesture {
-                            dismiss()
-                        }
-                }
-        }
+            .modifier(BackToolBarModifier())
             .onAppear {
-                withAnimation(Animation.easeIn(duration: 1.0).delay(0.5)) {
+                withAnimation(Animation.easeIn(duration: 1.0).delay(1.0)) {
                     self.progressBar = true
                 }
             }

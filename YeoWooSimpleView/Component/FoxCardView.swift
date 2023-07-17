@@ -11,18 +11,18 @@ import SwiftUI
 struct FoxCardView: View {
     
     let fox : Fox
-    @State var selectedFox : Bool = false
+    var isSelected : Bool
     
     var body: some View {
         VStack{
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: 108, height: 108)
-                    .foregroundColor(selectedFox ? .clicked : .whiteGray)
+                    .foregroundColor(isSelected ? .clicked : .whiteGray)
                     .overlay {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(lineWidth: 1.5)
-                            .foregroundColor(selectedFox ? .mainColor : .clear)
+                            .foregroundColor(isSelected ? .mainColor : .clear)
                     }
                 
                     
@@ -33,13 +33,10 @@ struct FoxCardView: View {
                         .scaledToFill()
                     .frame(width: 46, height: 48)
                     Text(fox.foxName)
+                        .font(.system(size: 16, weight: .bold, design: .default))
                 }
             }
-            .onTapGesture {
-                selectedFox.toggle()
-                //선택된 여우 데이터(true 나와야 정상)
-                print("\(fox.foxName) is selected: \(selectedFox)")
-            }
+            
             
             Text(fox.description)
                 .font(.system(size: 12, weight: .medium, design: .default))
@@ -53,6 +50,6 @@ struct FoxCardView: View {
 
 struct FoxCardView_Previews: PreviewProvider {
     static var previews: some View {
-        FoxCardView(fox: foxs[0])
+        FoxCardView(fox: foxs[0], isSelected: false)
     }
 }

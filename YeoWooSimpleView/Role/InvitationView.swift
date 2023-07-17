@@ -128,16 +128,7 @@ struct InvitationView: View {
             }
             .background(Color.white)
             .accentColor(.black)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading){
-                    Image(systemName: "chevron.left")
-                        .opacity(0.7)
-                        .imageScale(.large )
-                        .onTapGesture {
-                            dismiss()
-                        }
-                }
-        }
+            .modifier(BackToolBarModifier())
             .onAppear {
                 withAnimation(Animation.easeIn(duration: 1.0).delay(0.5)) {
                     self.opacityValues[0] = 1.0

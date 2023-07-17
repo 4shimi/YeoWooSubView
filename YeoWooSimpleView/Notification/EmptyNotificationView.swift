@@ -25,7 +25,7 @@ struct EmptyNotificationView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading){
                     Image(systemName: "chevron.left")
-                        .opacity(0.7)
+                        .opacity(0.3)
                         .imageScale(.large )
                         .onTapGesture {
                             dismiss()

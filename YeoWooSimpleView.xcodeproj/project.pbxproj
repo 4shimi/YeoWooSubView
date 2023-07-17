@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */; };
 		D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */; };
 		D57ED2B02A612EBC00670C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AF2A612EBC00670C31 /* ContentView.swift */; };
 		D57ED2B22A612EBE00670C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57ED2B12A612EBE00670C31 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToolBarModifier.swift; sourceTree = "<group>"; };
 		D57ED2AA2A612EBC00670C31 /* YeoWooSimpleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeoWooSimpleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeoWooSimpleViewApp.swift; sourceTree = "<group>"; };
 		D57ED2AF2A612EBC00670C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				D57ED2FB2A64444A00670C31 /* EditProfileRowView.swift */,
 				D57ED3042A653A1E00670C31 /* ProgressBar.swift */,
 				D57ED3082A65400300670C31 /* FoxCardView.swift */,
+				D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				D57ED2BF2A612F2000670C31 /* SettingView.swift in Sources */,
 				D57ED3052A653A1E00670C31 /* ProgressBar.swift in Sources */,
 				D57ED30B2A6551C800670C31 /* Fox.swift in Sources */,
+				D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */,
 				D57ED2D22A61711400670C31 /* Font.swift in Sources */,
 				D57ED2CE2A615B0000670C31 /* TextFieldModifier.swift in Sources */,
 				D57ED2C22A612F6500670C31 /* MainView.swift in Sources */,
