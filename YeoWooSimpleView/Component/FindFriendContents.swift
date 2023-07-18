@@ -10,7 +10,7 @@ import SwiftUI
 struct FindFriendContents: View {
     
     let user : User
-    @State var friendToggle = false
+    @Binding var friendToggle: Bool
     
     var body: some View {
        HStack {
@@ -39,12 +39,9 @@ struct FindFriendContents: View {
                     friendToggle.toggle()
                     print("\(user.username) is clicked")
                 } label: {
-                    friendToggle ? Image(systemName: "checkmark.circle.fill")
-                        .imageScale(.large)
-                        .foregroundColor(.mainColor) :
-                    Image(systemName: "circle")
-                        .imageScale(.large)
-                        .foregroundColor(.circleGray)
+                    Image(systemName: friendToggle ? "checkmark.circle.fill" : "circle")
+                                    .imageScale(.large)
+                                    .foregroundColor(friendToggle ? .mainColor : .circleGray)
                 }
                
             }
@@ -55,8 +52,8 @@ struct FindFriendContents: View {
 }
 
 
-struct FindFriendContents_Previews: PreviewProvider {
-    static var previews: some View {
-        FindFriendContents(user: users[1])
-    }
-}
+//struct FindFriendContents_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FindFriendContents(user: users[1])
+//    }
+//}

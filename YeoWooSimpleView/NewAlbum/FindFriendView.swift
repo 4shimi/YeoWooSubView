@@ -14,8 +14,10 @@ struct FindFriendView: View {
     @State var friendID: String = ""
     @State var myFriend: [User] = []
     
-    //firebase에서는 앨범별로 폴더를 만들어서 유저를 넣을거 같은데 일단 여기는 유저에 선택됐는지 표시할겡
+    //firebase에서는 앨범별로 폴더를 만들어서 유저를 넣을거 같은데 일단 여기는 선택된 유저 누군지 남길게요
+    //selectedFriends에 있는 대상이 선택된 대상이에요
     @State var selectedFriends: [User] = []
+    @State var friendToggles: [Bool] = []
 
 
     var body: some View {
@@ -42,10 +44,10 @@ struct FindFriendView: View {
                         
                         let foundUsers = users.first(where: { $0.nickname == friendID })
                         
-                        if let user = foundUsers {
-                            myFriend.insert(user, at: 0)
-                        }
-                        
+                        if let user = foundUsers, !myFriend.contains(where: { $0.id == user.id }) {
+                                myFriend.insert(user, at: 0)
+                                friendToggles.insert(false, at: 0)
+                            }                        
                  } label: {
                         Image(systemName: "magnifyingglass")
                             .resizable()
@@ -56,17 +58,19 @@ struct FindFriendView: View {
             }
             .padding(.bottom, 20)
             
-            
-            ForEach(myFriend, id: \.id) { user in
-                FindFriendContents(user: user)
+            ScrollView{
+                ForEach(myFriend.indices, id: \.self) { index in
+                    FindFriendContents(user: myFriend[index], friendToggle: $friendToggles[index])
+                }
+                
+                Spacer()
             }
-
-            Spacer()
             
                 Button{
                         //선택 완료(선택된 selectedfriend 넘기기)
-                    
+                    selectedFriends = myFriend.indices.filter { friendToggles[$0] }.map { myFriend[$0] }
                         
+                    print(selectedFriends)
                         
                     } label: {
                         Rectangle()
