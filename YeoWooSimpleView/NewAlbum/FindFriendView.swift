@@ -41,14 +41,15 @@ struct FindFriendView: View {
                     Spacer()
                         .frame(width: UIScreen.width - 110)
                     Button {
-                        
-                        let foundUsers = users.first(where: { $0.nickname == friendID })
-                        
-                        if let user = foundUsers, !myFriend.contains(where: { $0.id == user.id }) {
+                        let foundUsers = users.filter { $0.nickname == friendID }
+
+                        for user in foundUsers {
+                            if !myFriend.contains(where: { $0.id == user.id }) {
                                 myFriend.insert(user, at: 0)
                                 friendToggles.insert(false, at: 0)
-                            }                        
-                 } label: {
+                            }
+                        }
+                    } label: {
                         Image(systemName: "magnifyingglass")
                             .resizable()
                             .frame(width: 24, height: 24)

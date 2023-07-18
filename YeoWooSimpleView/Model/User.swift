@@ -23,5 +23,7 @@ let users = [
         User(username: "아지", nickname: "Azhy", profileImageUrl: "Azhy"),
         User(username: "썬데이", nickname: "Sunday", profileImageUrl: "Sunday"),
         User(username: "Sunday", nickname: "Sunday", profileImageUrl: "Sunday"),
-        User(username: "Jamie", nickname: "Jamie", profileImageUrl: "Jamie"),
+        User(username: "Jamie", nickname: "Jamie", profileImageUrl: "Nova"),
+        User(username: "Jamie", nickname: "Jamie1", profileImageUrl: "Jigu"),
+
 ]
