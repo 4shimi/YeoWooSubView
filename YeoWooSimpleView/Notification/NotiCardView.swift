@@ -33,7 +33,6 @@ struct NotiCardView: View {
         }
         .padding(.bottom, 49)
         .modifier(CardViewModifier(height: CGFloat(65 * dayNotiNum)))
-        .accentColor(.black)
     }
 }
 

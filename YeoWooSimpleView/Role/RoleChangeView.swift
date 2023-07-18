@@ -65,7 +65,7 @@ struct RoleChangeView: View {
                                 .frame(width: UIScreen.main.bounds.width - 30, height: 54)
                                 .foregroundColor(Color.mainColor)
                                 .cornerRadius(10)
-                                .overlay(Text("선택완료").font(.system(size: 18, weight: .bold, design: .default)).foregroundColor(Color.white))
+                                .overlay(Text("저장하기").font(.system(size: 18, weight: .bold, design: .default)).foregroundColor(Color.white))
                                 .padding(.bottom, 20)
                         }
                     
@@ -74,14 +74,13 @@ struct RoleChangeView: View {
                             .frame(width: UIScreen.main.bounds.width - 30, height: 54)
                             .foregroundColor(Color.unclicked)
                             .cornerRadius(10)
-                            .overlay(Text("선택완료").font(.system(size: 18, weight: .bold, design: .default)).foregroundColor(Color.white))
+                            .overlay(Text("저장하기").font(.system(size: 18, weight: .bold, design: .default)).foregroundColor(Color.white))
                             .padding(.bottom, 20)
                 }
             }
             .navigationTitle(Text("역할 수정하기"))
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
-            .accentColor(.black)
             .modifier(BackToolBarModifier())
     }
 }

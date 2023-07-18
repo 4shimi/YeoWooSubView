@@ -15,8 +15,10 @@ struct BackToolBarModifier: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading){
                     Image(systemName: "chevron.left")
+                        .imageScale(.large)
                         .opacity(0.3)
-                        .imageScale(.large )
+                        .padding(.trailing, 20)
+                        .padding(.bottom, 20)
                         .onTapGesture {
                             dismiss()
                         }

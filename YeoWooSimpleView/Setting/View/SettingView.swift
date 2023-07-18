@@ -64,7 +64,6 @@ struct SettingView: View {
                         }
                         .modifier(CardViewModifier(height: 95))
                     }
-                    .accentColor(.black)
                 }
                 
                 //알림 on/off
@@ -77,9 +76,9 @@ struct SettingView: View {
                             Image(systemName: "bell.fill")
                                 .resizable()
                                 .imageScale(.small)
+                                .foregroundColor(.gray)
                                 .scaledToFit()
                                 .frame(width: 20, height: 20)
-                                .opacity(0.5)
                             Circle()
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(.gray)
@@ -160,7 +159,6 @@ struct SettingView: View {
             .navigationTitle("설정")
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
-            .accentColor(.black)
             .modifier(BackToolBarModifier())
     }
 }

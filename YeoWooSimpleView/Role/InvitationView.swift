@@ -127,7 +127,6 @@ struct InvitationView: View {
                 .padding(.bottom, 20)
             }
             .background(Color.white)
-            .accentColor(.black)
             .modifier(BackToolBarModifier())
             .onAppear {
                 withAnimation(Animation.easeIn(duration: 1.0).delay(0.5)) {

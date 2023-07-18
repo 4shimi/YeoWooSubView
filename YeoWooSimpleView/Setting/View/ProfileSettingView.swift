@@ -96,7 +96,6 @@ struct ProfileSettingView: View {
         .navigationTitle("프로필 수정하기")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color.white)
-        .accentColor(.black)
         .modifier(BackToolBarModifier())
     }
 }

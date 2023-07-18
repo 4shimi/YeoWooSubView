@@ -1,17 +1,16 @@
 //
-//  RoleSelectView.swift
+//  AlbumRoleSelectView.swift
 //  YeoWooSimpleView
 //
-//  Created by 정회승 on 2023/07/14.
+//  Created by 정회승 on 2023/07/18.
 //
 
 import SwiftUI
 
-struct RoleSelectView: View {
+struct AlbumRoleSelectView: View {
     
     @Environment(\.dismiss) var dismiss
     @State var selectingFox = false
-    @State var progressBar = false
     //선택된 여우 번호
     @State private var selectedIndex: Int? = nil
     
@@ -28,9 +27,19 @@ struct RoleSelectView: View {
     var body: some View {
         NavigationView {
             VStack {
-                ProgressBar(progress: $progressBar)
-                    .offset(x: 25)
-                    .frame(height: 20)
+                
+                HStack (spacing: 0){
+                    Rectangle()
+                        .frame(width: (UIScreen.width - 50)/3*2, height: 3)
+                        .padding(.top, 15)
+                    .foregroundColor(.mainColor)
+                    Rectangle()
+                        .frame(width: (UIScreen.width - 50)/3, height: 3)
+                        .padding(.top, 15)
+                        .foregroundColor(.mainColor)
+                        .opacity(0.1)
+                }
+
                 VStack(alignment: .leading){
                     Text("여행에서 맡고 싶은 역할을")
                     Text("선택해주세요")
@@ -53,9 +62,7 @@ struct RoleSelectView: View {
                     }
                 }
                 
-                
                 Spacer()
-
 
                 // 버튼
                 if selectedIndex != nil {
@@ -86,18 +93,13 @@ struct RoleSelectView: View {
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
             .modifier(BackToolBarModifier())
-            .onAppear {
-                withAnimation(Animation.easeIn(duration: 1.0).delay(1.0)) {
-                    self.progressBar = true
-                }
-            }
 
         }
     }
 }
 
-struct RoleSelectView_Previews: PreviewProvider {
+struct AlbumRoleSelectView_Previews: PreviewProvider {
     static var previews: some View {
-        RoleSelectView()
+        AlbumRoleSelectView()
     }
 }

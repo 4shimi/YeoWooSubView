@@ -10,6 +10,10 @@
 		D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */; };
 		D560E5FE2A6576FB00422B6C /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5FD2A6576FB00422B6C /* Travel.swift */; };
 		D560E6002A65B4E800422B6C /* RoleChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5FF2A65B4E800422B6C /* RoleChangeView.swift */; };
+		D560E6022A66600000422B6C /* NewAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E6012A66600000422B6C /* NewAlbumView.swift */; };
+		D560E6052A66635100422B6C /* GrayTitleMakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E6042A66635100422B6C /* GrayTitleMakingView.swift */; };
+		D560E6072A667C5200422B6C /* AlbumRoleSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E6062A667C5200422B6C /* AlbumRoleSelectView.swift */; };
+		D560E6092A667F0000422B6C /* FindFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E6082A667F0000422B6C /* FindFriendView.swift */; };
 		D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */; };
 		D57ED2B02A612EBC00670C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AF2A612EBC00670C31 /* ContentView.swift */; };
 		D57ED2B22A612EBE00670C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57ED2B12A612EBE00670C31 /* Assets.xcassets */; };
@@ -39,6 +43,10 @@
 		D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToolBarModifier.swift; sourceTree = "<group>"; };
 		D560E5FD2A6576FB00422B6C /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		D560E5FF2A65B4E800422B6C /* RoleChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChangeView.swift; sourceTree = "<group>"; };
+		D560E6012A66600000422B6C /* NewAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlbumView.swift; sourceTree = "<group>"; };
+		D560E6042A66635100422B6C /* GrayTitleMakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTitleMakingView.swift; sourceTree = "<group>"; };
+		D560E6062A667C5200422B6C /* AlbumRoleSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRoleSelectView.swift; sourceTree = "<group>"; };
+		D560E6082A667F0000422B6C /* FindFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendView.swift; sourceTree = "<group>"; };
 		D57ED2AA2A612EBC00670C31 /* YeoWooSimpleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeoWooSimpleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeoWooSimpleViewApp.swift; sourceTree = "<group>"; };
 		D57ED2AF2A612EBC00670C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D560E6032A66619B00422B6C /* NewAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				D560E6012A66600000422B6C /* NewAlbumView.swift */,
+				D560E6062A667C5200422B6C /* AlbumRoleSelectView.swift */,
+				D560E6082A667F0000422B6C /* FindFriendView.swift */,
+			);
+			path = NewAlbum;
+			sourceTree = "<group>";
+		};
 		D57ED2A12A612EBC00670C31 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +115,7 @@
 			children = (
 				D57ED2CC2A615AE200670C31 /* Component */,
 				D57ED2C92A61564A00670C31 /* Model */,
+				D560E6032A66619B00422B6C /* NewAlbum */,
 				D57ED2BB2A612EE600670C31 /* Notification */,
 				D57ED2BC2A612EF700670C31 /* Role */,
 				D57ED2C02A612F5900670C31 /* Root */,
@@ -176,6 +195,7 @@
 				D57ED3082A65400300670C31 /* FoxCardView.swift */,
 				D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */,
 				D57ED2D52A617E5B00670C31 /* NotiCardContentsView.swift */,
+				D560E6042A66635100422B6C /* GrayTitleMakingView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -269,13 +289,16 @@
 				D57ED2C22A612F6500670C31 /* MainView.swift in Sources */,
 				D57ED2D02A616D1400670C31 /* NotiCardView.swift in Sources */,
 				D57ED3092A65400300670C31 /* FoxCardView.swift in Sources */,
+				D560E6022A66600000422B6C /* NewAlbumView.swift in Sources */,
 				D57ED2C82A61307800670C31 /* NotificationView.swift in Sources */,
 				D57ED2C62A61306600670C31 /* RoleSelectView.swift in Sources */,
 				D57ED3032A652C7100670C31 /* EmptyNotificationView.swift in Sources */,
 				D57ED3012A65265E00670C31 /* User.swift in Sources */,
 				D57ED2D42A6172B400670C31 /* CardViewModifier.swift in Sources */,
 				D57ED2B02A612EBC00670C31 /* ContentView.swift in Sources */,
+				D560E6072A667C5200422B6C /* AlbumRoleSelectView.swift in Sources */,
 				D57ED2FA2A6438AC00670C31 /* ProfileSettingView.swift in Sources */,
+				D560E6092A667F0000422B6C /* FindFriendView.swift in Sources */,
 				D560E5FE2A6576FB00422B6C /* Travel.swift in Sources */,
 				D57ED2CB2A61565700670C31 /* ColorModel.swift in Sources */,
 				D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */,
@@ -283,6 +306,7 @@
 				D57ED2FF2A6521E600670C31 /* ScreenModel.swift in Sources */,
 				D57ED2C42A61305900670C31 /* InvitationView.swift in Sources */,
 				D57ED2FC2A64444A00670C31 /* EditProfileRowView.swift in Sources */,
+				D560E6052A66635100422B6C /* GrayTitleMakingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

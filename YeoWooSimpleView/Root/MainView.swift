@@ -74,8 +74,9 @@ struct MainView: View {
                     
                     Spacer()
                     
-                    Button{
-                        print("camera")
+                    NavigationLink{
+                        NewAlbumView()
+                            .navigationBarBackButtonHidden()
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()

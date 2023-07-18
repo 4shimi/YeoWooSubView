@@ -14,6 +14,7 @@ extension Color{
     static let noGray = Color(red: 100 / 255, green: 100 / 255, blue: 100 / 255)
     static let alarmGray = Color(red: 150 / 255, green: 150 / 255, blue: 150 / 255)
     static let whiteGray = Color(red: 249 / 255, green: 249 / 255, blue: 249 / 255)
+    static let whiteGray2 = Color(red: 243 / 255, green: 243 / 255, blue: 243 / 255)
     static let clicked = Color(red: 238 / 255, green: 252 / 255, blue: 254 / 255)
     static let unclicked = Color(red: 171 / 255, green: 241 / 255, blue: 248 / 255)
 

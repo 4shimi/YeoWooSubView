@@ -37,7 +37,9 @@ struct NotificationView: View {
                 ToolbarItem(placement: .navigationBarLeading){
                     Image(systemName: "chevron.left")
                         .opacity(0.3)
-                        .imageScale(.large )
+                        .imageScale(.large)
+                        .padding(.trailing, 20)
+                        .padding(.bottom, 20)
                         .onTapGesture {
                             dismiss()
                         }
@@ -59,6 +61,8 @@ struct NotificationView: View {
                                     .rotationEffect(Angle(degrees: 90))
                                     .foregroundColor(.gray)
                                     .opacity(0.7)
+                                    .padding(.leading, 20)
+                                    .padding(.bottom, 20)
                             }
                 }
                 
