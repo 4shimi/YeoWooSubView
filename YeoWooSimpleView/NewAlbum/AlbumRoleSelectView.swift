@@ -53,7 +53,7 @@ struct AlbumRoleSelectView: View {
                 Spacer()
                 //FoxGrid 3x2
                 LazyVGrid(columns: gridItems, spacing: 30) {
-                    ForEach(0..<6) { id in
+                    ForEach(0..<6, id: \.self) { id in
                         FoxCardView(fox: foxs[id], isSelected: selectedIndex == id)
                             .onTapGesture {
                                 //한번 더 누르면 해제
@@ -66,9 +66,10 @@ struct AlbumRoleSelectView: View {
 
                 // 버튼
                 if selectedIndex != nil {
-                    Button{
+                    NavigationLink{
                             //선택 완료(선택된 selectedIndex 넘기기)
-                        print("selected fox is number \(selectedIndex ?? -1)")
+                        FindFriendView()
+                            .navigationBarBackButtonHidden()
                             
                             
                         } label: {

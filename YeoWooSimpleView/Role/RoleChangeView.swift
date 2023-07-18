@@ -40,7 +40,7 @@ struct RoleChangeView: View {
                 Spacer()
                 //FoxGrid 3x2
                 LazyVGrid(columns: gridItems, spacing: 30) {
-                    ForEach(0..<6) { id in
+                    ForEach(0..<6, id: \.self) { id in
                         FoxCardView(fox: foxs[id], isSelected: selectedIndex == id)
                             .onTapGesture {
                                 //한번 더 누르면 해제

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProgressBar: View {
-    @Binding var progress: Bool
+    @State var progress: Bool = false
 
     var body: some View {
         GeometryReader { geometry in
@@ -34,6 +34,6 @@ struct ProgressBar: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar(progress: .constant(false))
+        ProgressBar()
     }
 }

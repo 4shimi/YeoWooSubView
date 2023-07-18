@@ -14,6 +14,7 @@
 		D560E6052A66635100422B6C /* GrayTitleMakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E6042A66635100422B6C /* GrayTitleMakingView.swift */; };
 		D560E6072A667C5200422B6C /* AlbumRoleSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E6062A667C5200422B6C /* AlbumRoleSelectView.swift */; };
 		D560E6092A667F0000422B6C /* FindFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E6082A667F0000422B6C /* FindFriendView.swift */; };
+		D560E60B2A6690CC00422B6C /* FindFriendContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E60A2A6690CC00422B6C /* FindFriendContents.swift */; };
 		D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */; };
 		D57ED2B02A612EBC00670C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AF2A612EBC00670C31 /* ContentView.swift */; };
 		D57ED2B22A612EBE00670C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57ED2B12A612EBE00670C31 /* Assets.xcassets */; };
@@ -34,7 +35,6 @@
 		D57ED2FF2A6521E600670C31 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2FE2A6521E600670C31 /* ScreenModel.swift */; };
 		D57ED3012A65265E00670C31 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED3002A65265E00670C31 /* User.swift */; };
 		D57ED3032A652C7100670C31 /* EmptyNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED3022A652C7100670C31 /* EmptyNotificationView.swift */; };
-		D57ED3052A653A1E00670C31 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED3042A653A1E00670C31 /* ProgressBar.swift */; };
 		D57ED3092A65400300670C31 /* FoxCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED3082A65400300670C31 /* FoxCardView.swift */; };
 		D57ED30B2A6551C800670C31 /* Fox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED30A2A6551C800670C31 /* Fox.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +47,7 @@
 		D560E6042A66635100422B6C /* GrayTitleMakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTitleMakingView.swift; sourceTree = "<group>"; };
 		D560E6062A667C5200422B6C /* AlbumRoleSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRoleSelectView.swift; sourceTree = "<group>"; };
 		D560E6082A667F0000422B6C /* FindFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendView.swift; sourceTree = "<group>"; };
+		D560E60A2A6690CC00422B6C /* FindFriendContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendContents.swift; sourceTree = "<group>"; };
 		D57ED2AA2A612EBC00670C31 /* YeoWooSimpleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeoWooSimpleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeoWooSimpleViewApp.swift; sourceTree = "<group>"; };
 		D57ED2AF2A612EBC00670C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		D57ED2FE2A6521E600670C31 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		D57ED3002A65265E00670C31 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D57ED3022A652C7100670C31 /* EmptyNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNotificationView.swift; sourceTree = "<group>"; };
-		D57ED3042A653A1E00670C31 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		D57ED3082A65400300670C31 /* FoxCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxCardView.swift; sourceTree = "<group>"; };
 		D57ED30A2A6551C800670C31 /* Fox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,11 +191,11 @@
 				D57ED2D12A61711400670C31 /* Font.swift */,
 				D57ED2D32A6172B400670C31 /* CardViewModifier.swift */,
 				D57ED2FB2A64444A00670C31 /* EditProfileRowView.swift */,
-				D57ED3042A653A1E00670C31 /* ProgressBar.swift */,
 				D57ED3082A65400300670C31 /* FoxCardView.swift */,
 				D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */,
 				D57ED2D52A617E5B00670C31 /* NotiCardContentsView.swift */,
 				D560E6042A66635100422B6C /* GrayTitleMakingView.swift */,
+				D560E60A2A6690CC00422B6C /* FindFriendContents.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -280,12 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D57ED2BF2A612F2000670C31 /* SettingView.swift in Sources */,
-				D57ED3052A653A1E00670C31 /* ProgressBar.swift in Sources */,
 				D560E6002A65B4E800422B6C /* RoleChangeView.swift in Sources */,
 				D57ED30B2A6551C800670C31 /* Fox.swift in Sources */,
 				D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */,
 				D57ED2D22A61711400670C31 /* Font.swift in Sources */,
 				D57ED2CE2A615B0000670C31 /* TextFieldModifier.swift in Sources */,
+				D560E60B2A6690CC00422B6C /* FindFriendContents.swift in Sources */,
 				D57ED2C22A612F6500670C31 /* MainView.swift in Sources */,
 				D57ED2D02A616D1400670C31 /* NotiCardView.swift in Sources */,
 				D57ED3092A65400300670C31 /* FoxCardView.swift in Sources */,

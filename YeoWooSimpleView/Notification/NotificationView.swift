@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import UIKit
+//import UIKit
 
 struct NotificationView: View {
     @Environment(\.dismiss) var dismiss
@@ -80,6 +80,7 @@ struct NotificationView: View {
                                     secondaryButton: .cancel(Text("취소"))
                 )
             }
+            .accentColor(.black)
     }
 }
 

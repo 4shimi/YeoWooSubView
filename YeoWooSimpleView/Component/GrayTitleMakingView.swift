@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GrayTitleMakingView: View {
-    let Profile: String
     let placeholder: String
     @Binding var text: String
     
@@ -36,6 +35,6 @@ struct GrayTitleMakingView: View {
 
 struct GrayTitleMakingView_Previews: PreviewProvider {
     static var previews: some View {
-        GrayTitleMakingView(Profile: "앨범 이름", placeholder: "앨범이름", text: .constant(""))
+        GrayTitleMakingView(placeholder: "앨범이름", text: .constant(""))
     }
 }

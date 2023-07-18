@@ -160,6 +160,7 @@ struct SettingView: View {
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
             .modifier(BackToolBarModifier())
+            .accentColor(.black)
     }
 }
 

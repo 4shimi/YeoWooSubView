@@ -39,7 +39,7 @@ struct NewAlbumView: View {
 
                     
                     ZStack {
-                        GrayTitleMakingView(Profile: "앨범 이름", placeholder: "앨범 이름", text: $albumName)
+                        GrayTitleMakingView(placeholder: "앨범 이름", text: $albumName)
                         HStack {
                             Spacer()
                                 .frame(width: UIScreen.width - 110)

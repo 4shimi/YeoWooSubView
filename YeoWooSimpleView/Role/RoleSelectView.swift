@@ -11,7 +11,6 @@ struct RoleSelectView: View {
     
     @Environment(\.dismiss) var dismiss
     @State var selectingFox = false
-    @State var progressBar = false
     //선택된 여우 번호
     @State private var selectedIndex: Int? = nil
     
@@ -28,9 +27,13 @@ struct RoleSelectView: View {
     var body: some View {
         NavigationView {
             VStack {
-                ProgressBar(progress: $progressBar)
-                    .offset(x: 25)
-                    .frame(height: 20)
+
+                    Rectangle()
+                        .frame(width: UIScreen.width - 50, height: 3)
+                        .padding(.top, 15)
+                    .foregroundColor(.mainColor)
+
+
                 VStack(alignment: .leading){
                     Text("여행에서 맡고 싶은 역할을")
                     Text("선택해주세요")
@@ -44,7 +47,7 @@ struct RoleSelectView: View {
                 Spacer()
                 //FoxGrid 3x2
                 LazyVGrid(columns: gridItems, spacing: 30) {
-                    ForEach(0..<6) { id in
+                    ForEach(0..<6, id: \.self) { id in
                         FoxCardView(fox: foxs[id], isSelected: selectedIndex == id)
                             .onTapGesture {
                                 //한번 더 누르면 해제
@@ -86,11 +89,6 @@ struct RoleSelectView: View {
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
             .modifier(BackToolBarModifier())
-            .onAppear {
-                withAnimation(Animation.easeIn(duration: 1.0).delay(1.0)) {
-                    self.progressBar = true
-                }
-            }
 
         }
     }
