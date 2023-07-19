@@ -10,7 +10,7 @@ import SwiftUI
 struct NotiView: View {
     
     //노티 받기
-    @State var notication: [User] = []
+    @State var notication: [User] = [users[1]]
     
     var body: some View {
         if notication.isEmpty {

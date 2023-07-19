@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D52ABD162A67D41F0036566A /* TwoInvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52ABD152A67D41F0036566A /* TwoInvitationView.swift */; };
+		D52ABD1B2A67D8E30036566A /* InvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52ABD1A2A67D8E30036566A /* InvitationView.swift */; };
 		D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */; };
 		D560E5FE2A6576FB00422B6C /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5FD2A6576FB00422B6C /* Travel.swift */; };
 		D560E6002A65B4E800422B6C /* RoleChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E5FF2A65B4E800422B6C /* RoleChangeView.swift */; };
@@ -21,7 +23,7 @@
 		D57ED2B52A612EBE00670C31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57ED2B42A612EBE00670C31 /* Preview Assets.xcassets */; };
 		D57ED2BF2A612F2000670C31 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2BE2A612F2000670C31 /* SettingView.swift */; };
 		D57ED2C22A612F6500670C31 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2C12A612F6500670C31 /* MainView.swift */; };
-		D57ED2C42A61305900670C31 /* InvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2C32A61305900670C31 /* InvitationView.swift */; };
+		D57ED2C42A61305900670C31 /* MultiInvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2C32A61305900670C31 /* MultiInvitationView.swift */; };
 		D57ED2C62A61306600670C31 /* RoleSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2C52A61306600670C31 /* RoleSelectView.swift */; };
 		D57ED2C82A61307800670C31 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2C72A61307800670C31 /* NotificationView.swift */; };
 		D57ED2CB2A61565700670C31 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2CA2A61565700670C31 /* ColorModel.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D52ABD152A67D41F0036566A /* TwoInvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoInvitationView.swift; sourceTree = "<group>"; };
+		D52ABD1A2A67D8E30036566A /* InvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationView.swift; sourceTree = "<group>"; };
 		D560E5F92A6561F900422B6C /* BackToolBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToolBarModifier.swift; sourceTree = "<group>"; };
 		D560E5FD2A6576FB00422B6C /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		D560E5FF2A65B4E800422B6C /* RoleChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChangeView.swift; sourceTree = "<group>"; };
@@ -56,7 +60,7 @@
 		D57ED2B42A612EBE00670C31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D57ED2BE2A612F2000670C31 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		D57ED2C12A612F6500670C31 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		D57ED2C32A61305900670C31 /* InvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationView.swift; sourceTree = "<group>"; };
+		D57ED2C32A61305900670C31 /* MultiInvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiInvitationView.swift; sourceTree = "<group>"; };
 		D57ED2C52A61306600670C31 /* RoleSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectView.swift; sourceTree = "<group>"; };
 		D57ED2C72A61307800670C31 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		D57ED2CA2A61565700670C31 /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D52ABD142A67D3E80036566A /* InvitationViews */ = {
+			isa = PBXGroup;
+			children = (
+				D57ED2C32A61305900670C31 /* MultiInvitationView.swift */,
+				D52ABD152A67D41F0036566A /* TwoInvitationView.swift */,
+			);
+			path = InvitationViews;
+			sourceTree = "<group>";
+		};
 		D560E6032A66619B00422B6C /* NewAlbum */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,9 +164,10 @@
 		D57ED2BC2A612EF700670C31 /* Role */ = {
 			isa = PBXGroup;
 			children = (
-				D57ED2C32A61305900670C31 /* InvitationView.swift */,
+				D52ABD142A67D3E80036566A /* InvitationViews */,
 				D57ED2C52A61306600670C31 /* RoleSelectView.swift */,
 				D560E5FF2A65B4E800422B6C /* RoleChangeView.swift */,
+				D52ABD1A2A67D8E30036566A /* InvitationView.swift */,
 			);
 			path = Role;
 			sourceTree = "<group>";
@@ -293,6 +307,7 @@
 				D57ED2BF2A612F2000670C31 /* SettingView.swift in Sources */,
 				D560E6002A65B4E800422B6C /* RoleChangeView.swift in Sources */,
 				D5DE2D262A67C8770075F14B /* NotiView.swift in Sources */,
+				D52ABD162A67D41F0036566A /* TwoInvitationView.swift in Sources */,
 				D57ED30B2A6551C800670C31 /* Fox.swift in Sources */,
 				D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */,
 				D57ED2D22A61711400670C31 /* Font.swift in Sources */,
@@ -300,6 +315,7 @@
 				D560E60B2A6690CC00422B6C /* FindFriendContents.swift in Sources */,
 				D57ED2C22A612F6500670C31 /* MainView.swift in Sources */,
 				D57ED2D02A616D1400670C31 /* NotiCardView.swift in Sources */,
+				D52ABD1B2A67D8E30036566A /* InvitationView.swift in Sources */,
 				D57ED3092A65400300670C31 /* FoxCardView.swift in Sources */,
 				D560E6022A66600000422B6C /* NewAlbumView.swift in Sources */,
 				D57ED2C82A61307800670C31 /* NotificationView.swift in Sources */,
@@ -316,7 +332,7 @@
 				D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */,
 				D57ED2D62A617E5B00670C31 /* NotiCardContentsView.swift in Sources */,
 				D57ED2FF2A6521E600670C31 /* ScreenModel.swift in Sources */,
-				D57ED2C42A61305900670C31 /* InvitationView.swift in Sources */,
+				D57ED2C42A61305900670C31 /* MultiInvitationView.swift in Sources */,
 				D57ED2FC2A64444A00670C31 /* EditProfileRowView.swift in Sources */,
 				D560E6052A66635100422B6C /* GrayTitleMakingView.swift in Sources */,
 			);
