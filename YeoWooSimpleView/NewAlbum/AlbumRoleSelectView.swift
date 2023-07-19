@@ -25,7 +25,6 @@ struct AlbumRoleSelectView: View {
     
     
     var body: some View {
-        NavigationView {
             VStack {
                 
                 HStack (spacing: 0){
@@ -94,8 +93,6 @@ struct AlbumRoleSelectView: View {
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
             .modifier(BackToolBarModifier())
-
-        }
     }
 }
 
