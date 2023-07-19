@@ -37,6 +37,7 @@
 		D57ED3032A652C7100670C31 /* EmptyNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED3022A652C7100670C31 /* EmptyNotificationView.swift */; };
 		D57ED3092A65400300670C31 /* FoxCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED3082A65400300670C31 /* FoxCardView.swift */; };
 		D57ED30B2A6551C800670C31 /* Fox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED30A2A6551C800670C31 /* Fox.swift */; };
+		D5DE2D262A67C8770075F14B /* NotiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE2D252A67C8770075F14B /* NotiView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		D57ED3022A652C7100670C31 /* EmptyNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNotificationView.swift; sourceTree = "<group>"; };
 		D57ED3082A65400300670C31 /* FoxCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxCardView.swift; sourceTree = "<group>"; };
 		D57ED30A2A6551C800670C31 /* Fox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fox.swift; sourceTree = "<group>"; };
+		D5DE2D252A67C8770075F14B /* NotiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +141,9 @@
 		D57ED2BB2A612EE600670C31 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				D57ED2C72A61307800670C31 /* NotificationView.swift */,
+				D5DE2D272A67C90D0075F14B /* NotiKindOfView */,
 				D57ED2CF2A616D1400670C31 /* NotiCardView.swift */,
-				D57ED3022A652C7100670C31 /* EmptyNotificationView.swift */,
+				D5DE2D252A67C8770075F14B /* NotiView.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -207,6 +209,15 @@
 				D57ED2F92A6438AC00670C31 /* ProfileSettingView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D5DE2D272A67C90D0075F14B /* NotiKindOfView */ = {
+			isa = PBXGroup;
+			children = (
+				D57ED2C72A61307800670C31 /* NotificationView.swift */,
+				D57ED3022A652C7100670C31 /* EmptyNotificationView.swift */,
+			);
+			path = NotiKindOfView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 			files = (
 				D57ED2BF2A612F2000670C31 /* SettingView.swift in Sources */,
 				D560E6002A65B4E800422B6C /* RoleChangeView.swift in Sources */,
+				D5DE2D262A67C8770075F14B /* NotiView.swift in Sources */,
 				D57ED30B2A6551C800670C31 /* Fox.swift in Sources */,
 				D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */,
 				D57ED2D22A61711400670C31 /* Font.swift in Sources */,

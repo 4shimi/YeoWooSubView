@@ -46,7 +46,7 @@ struct MainView: View {
                             .foregroundColor(.whiteGray)
                         HStack{
                             NavigationLink{
-                                NotificationView()
+                                NotiView()
                                     .navigationBarBackButtonHidden()
                             } label: {
                                 Circle()
