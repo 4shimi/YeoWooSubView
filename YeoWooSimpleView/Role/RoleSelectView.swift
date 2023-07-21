@@ -25,7 +25,6 @@ struct RoleSelectView: View {
     
     
     var body: some View {
-        NavigationView {
             VStack {
 
                     Rectangle()
@@ -46,7 +45,7 @@ struct RoleSelectView: View {
                 
                 Spacer()
                 //FoxGrid 3x2
-                LazyVGrid(columns: gridItems, spacing: 30) {
+                LazyVGrid(columns: gridItems, spacing: 48) {
                     ForEach(0..<6, id: \.self) { id in
                         FoxCardView(fox: foxs[id], isSelected: selectedIndex == id)
                             .onTapGesture {
@@ -55,6 +54,7 @@ struct RoleSelectView: View {
                             }
                     }
                 }
+                .padding(.horizontal,10)
                 
                 
                 Spacer()
@@ -89,8 +89,6 @@ struct RoleSelectView: View {
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.white)
             .modifier(BackToolBarModifier())
-
-        }
     }
 }
 

@@ -85,16 +85,19 @@ struct SettingView: View {
                                 .opacity(0.1)
                         }
                             .padding(.horizontal, 10 )
-                        HStack{
-                            Text("사진 촬영 알림 받기")
-                                .font(.system(size: 16, weight: .regular, design: .default))
-                       
-                            Spacer()
-                            
-                            Toggle("", isOn: $notiToggle)
-                                .toggleStyle(SwitchToggleStyle(tint: Color.mainColor))
-                                .padding(.trailing, 20)
-                    }
+                        NavigationLink { NotiTestView() }
+                    label: {
+                            HStack{
+                                Text("사진 촬영 알림 받기")
+                                    .font(.system(size: 16, weight: .regular, design: .default))
+                           
+                                Spacer()
+                                
+                                Toggle("", isOn: $notiToggle)
+                                    .toggleStyle(SwitchToggleStyle(tint: Color.mainColor))
+                                    .padding(.trailing, 20)
+                            }
+                        }
                     }
                     .modifier(CardViewModifier())
                 }

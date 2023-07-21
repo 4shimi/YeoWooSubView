@@ -41,6 +41,7 @@ struct FindFriendView: View {
                     Spacer()
                         .frame(width: UIScreen.width - 110)
                     Button {
+                        //데이터 넘기고 앨범만들기 끝
                         let foundUsers = users.filter { $0.nickname == friendID }
 
                         for user in foundUsers {
@@ -50,10 +51,10 @@ struct FindFriendView: View {
                             }
                         }
                     } label: {
-                        Image(systemName: "magnifyingglass")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                        .foregroundColor(.alarmGray)
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 45, height: 28)
+                            .foregroundColor(.mainColor)
+                            .overlay(Text("검색").foregroundColor(.white))
                     }
                 }
             }

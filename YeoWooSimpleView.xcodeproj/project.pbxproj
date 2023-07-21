@@ -17,6 +17,12 @@
 		D560E6072A667C5200422B6C /* AlbumRoleSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E6062A667C5200422B6C /* AlbumRoleSelectView.swift */; };
 		D560E6092A667F0000422B6C /* FindFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E6082A667F0000422B6C /* FindFriendView.swift */; };
 		D560E60B2A6690CC00422B6C /* FindFriendContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560E60A2A6690CC00422B6C /* FindFriendContents.swift */; };
+		D575D8312A6821A50036BE7D /* PushTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D8302A6821A50036BE7D /* PushTestView.swift */; };
+		D575D8332A682FA80036BE7D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D575D8322A682FA80036BE7D /* 1.png */; };
+		D575D8352A690FB80036BE7D /* Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D8342A690FB80036BE7D /* Push.swift */; };
+		D575D8412A6960880036BE7D /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D8402A6960880036BE7D /* NotificationHandler.swift */; };
+		D575D8442A6964150036BE7D /* NotiTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D8432A6964150036BE7D /* NotiTestView.swift */; };
+		D575D8462A69FDA70036BE7D /* TravelSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D8452A69FDA70036BE7D /* TravelSampleData.swift */; };
 		D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */; };
 		D57ED2B02A612EBC00670C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED2AF2A612EBC00670C31 /* ContentView.swift */; };
 		D57ED2B22A612EBE00670C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57ED2B12A612EBE00670C31 /* Assets.xcassets */; };
@@ -53,6 +59,12 @@
 		D560E6062A667C5200422B6C /* AlbumRoleSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRoleSelectView.swift; sourceTree = "<group>"; };
 		D560E6082A667F0000422B6C /* FindFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendView.swift; sourceTree = "<group>"; };
 		D560E60A2A6690CC00422B6C /* FindFriendContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendContents.swift; sourceTree = "<group>"; };
+		D575D8302A6821A50036BE7D /* PushTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTestView.swift; sourceTree = "<group>"; };
+		D575D8322A682FA80036BE7D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		D575D8342A690FB80036BE7D /* Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push.swift; sourceTree = "<group>"; };
+		D575D8402A6960880036BE7D /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		D575D8432A6964150036BE7D /* NotiTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiTestView.swift; sourceTree = "<group>"; };
+		D575D8452A69FDA70036BE7D /* TravelSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelSampleData.swift; sourceTree = "<group>"; };
 		D57ED2AA2A612EBC00670C31 /* YeoWooSimpleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeoWooSimpleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeoWooSimpleViewApp.swift; sourceTree = "<group>"; };
 		D57ED2AF2A612EBC00670C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +121,41 @@
 			path = NewAlbum;
 			sourceTree = "<group>";
 		};
+		D575D82F2A681D9E0036BE7D /* PushAlert */ = {
+			isa = PBXGroup;
+			children = (
+				D575D8422A6963F60036BE7D /* PushTestView */,
+				D575D83F2A6960710036BE7D /* Handlers */,
+				D575D83E2A6960070036BE7D /* TravelingState */,
+			);
+			path = PushAlert;
+			sourceTree = "<group>";
+		};
+		D575D83E2A6960070036BE7D /* TravelingState */ = {
+			isa = PBXGroup;
+			children = (
+				D575D8302A6821A50036BE7D /* PushTestView.swift */,
+				D575D8322A682FA80036BE7D /* 1.png */,
+			);
+			path = TravelingState;
+			sourceTree = "<group>";
+		};
+		D575D83F2A6960710036BE7D /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				D575D8402A6960880036BE7D /* NotificationHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		D575D8422A6963F60036BE7D /* PushTestView */ = {
+			isa = PBXGroup;
+			children = (
+				D575D8432A6964150036BE7D /* NotiTestView.swift */,
+			);
+			path = PushTestView;
+			sourceTree = "<group>";
+		};
 		D57ED2A12A612EBC00670C31 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +175,7 @@
 		D57ED2AC2A612EBC00670C31 /* YeoWooSimpleView */ = {
 			isa = PBXGroup;
 			children = (
+				D575D82F2A681D9E0036BE7D /* PushAlert */,
 				D57ED2CC2A615AE200670C31 /* Component */,
 				D57ED2C92A61564A00670C31 /* Model */,
 				D560E6032A66619B00422B6C /* NewAlbum */,
@@ -155,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				D5DE2D272A67C90D0075F14B /* NotiKindOfView */,
-				D57ED2CF2A616D1400670C31 /* NotiCardView.swift */,
 				D5DE2D252A67C8770075F14B /* NotiView.swift */,
 			);
 			path = Notification;
@@ -196,6 +243,8 @@
 				D57ED3002A65265E00670C31 /* User.swift */,
 				D57ED30A2A6551C800670C31 /* Fox.swift */,
 				D560E5FD2A6576FB00422B6C /* Travel.swift */,
+				D575D8342A690FB80036BE7D /* Push.swift */,
+				D575D8452A69FDA70036BE7D /* TravelSampleData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +279,7 @@
 			children = (
 				D57ED2C72A61307800670C31 /* NotificationView.swift */,
 				D57ED3022A652C7100670C31 /* EmptyNotificationView.swift */,
+				D57ED2CF2A616D1400670C31 /* NotiCardView.swift */,
 			);
 			path = NotiKindOfView;
 			sourceTree = "<group>";
@@ -292,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D575D8332A682FA80036BE7D /* 1.png in Resources */,
 				D57ED2B52A612EBE00670C31 /* Preview Assets.xcassets in Resources */,
 				D57ED2B22A612EBE00670C31 /* Assets.xcassets in Resources */,
 			);
@@ -312,10 +363,14 @@
 				D560E5FA2A6561F900422B6C /* BackToolBarModifier.swift in Sources */,
 				D57ED2D22A61711400670C31 /* Font.swift in Sources */,
 				D57ED2CE2A615B0000670C31 /* TextFieldModifier.swift in Sources */,
+				D575D8312A6821A50036BE7D /* PushTestView.swift in Sources */,
 				D560E60B2A6690CC00422B6C /* FindFriendContents.swift in Sources */,
 				D57ED2C22A612F6500670C31 /* MainView.swift in Sources */,
 				D57ED2D02A616D1400670C31 /* NotiCardView.swift in Sources */,
 				D52ABD1B2A67D8E30036566A /* InvitationView.swift in Sources */,
+				D575D8352A690FB80036BE7D /* Push.swift in Sources */,
+				D575D8412A6960880036BE7D /* NotificationHandler.swift in Sources */,
+				D575D8462A69FDA70036BE7D /* TravelSampleData.swift in Sources */,
 				D57ED3092A65400300670C31 /* FoxCardView.swift in Sources */,
 				D560E6022A66600000422B6C /* NewAlbumView.swift in Sources */,
 				D57ED2C82A61307800670C31 /* NotificationView.swift in Sources */,
@@ -329,6 +384,7 @@
 				D560E6092A667F0000422B6C /* FindFriendView.swift in Sources */,
 				D560E5FE2A6576FB00422B6C /* Travel.swift in Sources */,
 				D57ED2CB2A61565700670C31 /* ColorModel.swift in Sources */,
+				D575D8442A6964150036BE7D /* NotiTestView.swift in Sources */,
 				D57ED2AE2A612EBC00670C31 /* YeoWooSimpleViewApp.swift in Sources */,
 				D57ED2D62A617E5B00670C31 /* NotiCardContentsView.swift in Sources */,
 				D57ED2FF2A6521E600670C31 /* ScreenModel.swift in Sources */,

@@ -51,7 +51,7 @@ struct AlbumRoleSelectView: View {
                 
                 Spacer()
                 //FoxGrid 3x2
-                LazyVGrid(columns: gridItems, spacing: 30) {
+                LazyVGrid(columns: gridItems, spacing: 48) {
                     ForEach(0..<6, id: \.self) { id in
                         FoxCardView(fox: foxs[id], isSelected: selectedIndex == id)
                             .onTapGesture {
@@ -60,6 +60,8 @@ struct AlbumRoleSelectView: View {
                             }
                     }
                 }
+                .padding(.horizontal,10)
+
                 
                 Spacer()
 
