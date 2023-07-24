@@ -15,6 +15,8 @@ struct NotificationView: View {
     
     @State private var selectedIndex: Int? = nil
 
+
+    
     var body: some View {
         
         //같은 날짜 배열값 딕셔너리
@@ -32,7 +34,7 @@ struct NotificationView: View {
             }
             .navigationTitle("알림")
             .navigationBarTitleDisplayMode(.inline)
-            .background(Color.white)
+            .background(Color.whiteGray)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading){
                     Image(systemName: "chevron.left")
@@ -80,8 +82,10 @@ struct NotificationView: View {
                                     secondaryButton: .cancel(Text("취소"))
                 )
             }
+ 
             .accentColor(.black)
     }
+    
 }
 
 struct NotificationView_Previews: PreviewProvider {

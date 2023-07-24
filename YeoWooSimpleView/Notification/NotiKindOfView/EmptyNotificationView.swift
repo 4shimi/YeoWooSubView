@@ -12,15 +12,17 @@ struct EmptyNotificationView: View {
     @State private var deletingAll = false
     @State private var deletingAlarm = false
 
+    
     var body: some View {
             VStack{
                 Text("알림이 비어있어요")
                     .font(.system(size: 20, weight: .bold, design: .default))
                     .foregroundColor(.alarmGray)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.whiteGray)
             .navigationTitle("알림")
             .navigationBarTitleDisplayMode(.inline)
-            .background(Color.white)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading){
                     Image(systemName: "chevron.left")
@@ -62,7 +64,9 @@ struct EmptyNotificationView: View {
                                     secondaryButton: .cancel(Text("취소"))
                 )
             }
+
     }
+    
 }
 
 struct EmptyNotificationView_Previews: PreviewProvider {

@@ -11,7 +11,7 @@ import UserNotifications
 
 class NotificationHandler {
     
-    //여행 날짜 연습용 컴포넌트
+    //여행 날짜 컴포넌트
     func sendNotification(date: Date, type: String, timeInterval: Double = 10, title: String, body: String) {
         var trigger: UNNotificationTrigger?
         
@@ -30,7 +30,6 @@ class NotificationHandler {
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request)
-        
         
     }
     

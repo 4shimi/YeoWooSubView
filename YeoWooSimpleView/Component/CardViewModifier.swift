@@ -17,7 +17,7 @@ struct CardViewModifier: ViewModifier {
             .frame(width: UIScreen.main.bounds.width - 30, height: height)
             .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .fill(.white))
-            .shadow(color: Color.black.opacity(0.05), radius: 20, x: 0, y: 4)
+            .shadow(color: Color.circleGray.opacity(0.6), radius: 6, x: 0, y: 2)
             
 //            .overlay(
 //                RoundedRectangle(cornerRadius: 20)

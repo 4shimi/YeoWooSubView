@@ -19,6 +19,8 @@ struct SettingView: View {
     //로그아웃  action sheet
     @State private var loggingOutSheet = false
     
+
+    
     
     var body: some View {
             //VStack 뷰
@@ -116,7 +118,10 @@ struct SettingView: View {
                         }
                         .frame(width: UIScreen.main.bounds.width - 30, height: 54)
                         .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(Color.whiteGray))
+                            .fill(Color.white))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .stroke(Color.whiteGray2, lineWidth: 1))
+                        
                     //탈퇴 alert
                         .alert(isPresented: $deletingAccount) {
                             Alert(
@@ -130,6 +135,7 @@ struct SettingView: View {
                                                 secondaryButton: .cancel(Text("취소"))
                             )
                         }
+                        .padding(.bottom, 10)
 
                     
                     //로그아웃
@@ -142,7 +148,10 @@ struct SettingView: View {
                     }
                         .frame(width: UIScreen.main.bounds.width - 30, height: 54)
                         .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(Color.whiteGray))
+                            .fill(Color.white))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .stroke(Color.whiteGray2, lineWidth: 1))
+
                     //로그아웃 시트
                         .actionSheet(isPresented: $loggingOutSheet) {
                             ActionSheet(title: Text("로그아웃"),
@@ -155,16 +164,18 @@ struct SettingView: View {
 
                     
                 }
-
-                
+                .padding(.bottom, 10)
                 
             }
-            .navigationTitle("설정")
+        
+            .background(Color.whiteGray)
+            .navigationTitle("MY")
             .navigationBarTitleDisplayMode(.inline)
-            .background(Color.white)
             .modifier(BackToolBarModifier())
             .accentColor(.black)
     }
+    
+    
 }
 
 struct SettingView_Previews: PreviewProvider {

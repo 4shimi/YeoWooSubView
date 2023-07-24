@@ -27,7 +27,6 @@ struct ProfileSettingView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(width: 130, height: 130)
-                        .background(Color.mainColor)
                         .clipShape(Circle())
                         .padding(.horizontal, 10 )
                     //카메라 모양

@@ -53,9 +53,7 @@ struct NotiTestView: View {
 
             //여행 중 하루 3번
             Button("Schedule notification") {
-                let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                let rnd = numbers.randomElement() ?? 0
-                
+
                 //11시-17시 사이 최소간격 2시간
                 var availableHours = Array(stride(from: 11, to: 19, by: 2))
                 
@@ -108,7 +106,8 @@ struct NotiTestView: View {
                 //여기에 데이터 바인딩 넣기
                 dateComponents.year = Calendar.current.component(.year, from: schedules[travelNumber].endingDate)
                 dateComponents.month = Calendar.current.component(.month, from: schedules[travelNumber].endingDate)
-                dateComponents.day = Calendar.current.component(.day, from: schedules[travelNumber].endingDate) + rnd
+                dateComponents.day = Calendar.current.component(.day, from: schedules[travelNumber].endingDate)
+//                + rnd
                 dateComponents.hour = Calendar.current.component(.hour, from: schedules[travelNumber].endingDate)
                 dateComponents.minute = Calendar.current.component(.minute, from: schedules[travelNumber].endingDate)
                 let finishedDate = calendar.date(from: dateComponents) ?? Date()

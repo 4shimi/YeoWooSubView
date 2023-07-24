@@ -30,7 +30,7 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
     //Can use yeowoo app in foreground states
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.banner, .sound, .badge])
-    }
+    } 
     
     
 }

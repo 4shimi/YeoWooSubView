@@ -18,7 +18,6 @@ struct NotiCardView: View {
             Text(travels.first?.Date ?? "None")
                 .font(.system(size: 18, weight: .semibold, design: .default))
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 20)
                 .padding(.bottom, 20)
             
             ForEach(Array(travels.enumerated()), id: \.element.id) { index, travel in
