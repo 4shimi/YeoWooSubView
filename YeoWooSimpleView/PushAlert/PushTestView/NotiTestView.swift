@@ -54,7 +54,7 @@ struct NotiTestView: View {
             //여행 중 하루 3번
             Button("Schedule notification") {
 
-                //11시-17시 사이 최소간격 2시간
+                //11시-19시 사이 최소간격 2시간
                 var availableHours = Array(stride(from: 11, to: 19, by: 2))
                 
                 // push 3번
@@ -124,8 +124,57 @@ struct NotiTestView: View {
             }.foregroundColor(.green)
                 
             Spacer()
+            
+             Button{
+                
+                let center = UNUserNotificationCenter.current()
+                
+                //create yeowoo content
+                let content = UNMutableNotificationContent()
+                content.title = "YeoWoo"
+                
+                print(Text("알람 전송"))
+                
+                content.body = "testing move to Camera modal"
+                content.categoryIdentifier = NotificationCategory.general.rawValue
+                //위에 userNotificaitonCenter didReceive func Check 용도
+                content.userInfo = ["먹방여우": "핀"]
+                
+                //create trigger(시간 랜덤? 예정) 지금은 버튼 누르고 5초 뒤
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2.0, repeats: false)
+                
+                
+                //create request
+                let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
+                
+                //define actions
+                let dismiss = UNNotificationAction(identifier: NotificationAction.dismiss.rawValue, title: "Dismiss")
+                
+                let reminder = UNNotificationAction(identifier: NotificationAction.reminder.rawValue, title: "Reminder")
+                
+                let generalCategory = UNNotificationCategory(identifier: NotificationCategory.general.rawValue, actions: [reminder, dismiss], intentIdentifiers: [])
+                
+                center.setNotificationCategories([generalCategory])
+                
+                //add request to notification center
+                center.add(request) { error in
+                    if let error = error {
+                        print(error)
+                    }
+                }
+                
+                
+
+            } label: {
+                Text("2초 뒤 알람 전송")
+            }
+            Spacer()
         }
+        
+        
     }
+    
+    
 }
 
 struct NotiTestView_Previews: PreviewProvider {
