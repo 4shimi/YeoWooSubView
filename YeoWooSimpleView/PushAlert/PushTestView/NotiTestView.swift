@@ -19,10 +19,13 @@ struct NotiTestView: View {
     //받아오는 여행 넘버
     @State var travelNumber:Int = 0
     
+    //네비게이션 뷰모델
+    @EnvironmentObject var viewModel: NavigationViewModel
+    
     let notify = NotificationHandler()
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack {
             Spacer()
 
             //여행 하루전날
@@ -89,6 +92,10 @@ struct NotiTestView: View {
                     print(randomNotificationDate)
                     print(pushs[rndPush].content)
                 }
+                
+                
+                
+                
             }.foregroundColor(.yellow)
                 
             Spacer()
@@ -118,6 +125,7 @@ struct NotiTestView: View {
                     title: "YeoWoo",
                     body: "\(rnd)일 전 \(pastAlbumName)여행을 떠올리면서 오늘도 행복한 하루!🤩")
                 
+                
                 //출력은 미국 시간으로 됩니다 :)
                 print(finishedDate)
                 print("\(rnd)일 전 \(pastAlbumName)여행을 떠올리면서 오늘도 행복한 하루!🤩")
@@ -126,49 +134,59 @@ struct NotiTestView: View {
             Spacer()
             
              Button{
-                
-                let center = UNUserNotificationCenter.current()
-                
-                //create yeowoo content
-                let content = UNMutableNotificationContent()
-                content.title = "YeoWoo"
-                
-                print(Text("알람 전송"))
-                
-                content.body = "testing move to Camera modal"
-                content.categoryIdentifier = NotificationCategory.general.rawValue
-                //위에 userNotificaitonCenter didReceive func Check 용도
-                content.userInfo = ["먹방여우": "핀"]
-                
-                //create trigger(시간 랜덤? 예정) 지금은 버튼 누르고 5초 뒤
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2.0, repeats: false)
-                
-                
-                //create request
-                let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
-                
-                //define actions
-                let dismiss = UNNotificationAction(identifier: NotificationAction.dismiss.rawValue, title: "Dismiss")
-                
-                let reminder = UNNotificationAction(identifier: NotificationAction.reminder.rawValue, title: "Reminder")
-                
-                let generalCategory = UNNotificationCategory(identifier: NotificationCategory.general.rawValue, actions: [reminder, dismiss], intentIdentifiers: [])
-                
-                center.setNotificationCategories([generalCategory])
-                
-                //add request to notification center
-                center.add(request) { error in
-                    if let error = error {
-                        print(error)
-                    }
-                }
-                
-                
+                 
+                 let center = UNUserNotificationCenter.current()
+                 
+                 //create yeowoo content
+                 let content = UNMutableNotificationContent()
+                 content.title = "YeoWoo"
+                 
+                 print(Text("⚠️\(albumName)여행을 시작해요! 깜빡하지 마세요!"))
+                 
+                 content.body = "⚠️\(albumName)여행을 시작해요! 깜빡하지 마세요!"
+                 content.categoryIdentifier = NotificationCategory.general.rawValue
+                 //위에 userNotificaitonCenter didReceive func Check 용도
+                 content.userInfo = ["먹방여우": "핀"]
+                 
+                 //create trigger(시간 랜덤? 예정) 지금은 버튼 누르고 2초 뒤
+                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2.0, repeats: false)
+                 
+                 
+                 //create request
+                 let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
+                 
+                 //define actions
+                 let dismiss = UNNotificationAction(identifier: NotificationAction.dismiss.rawValue, title: "Dismiss")
+                 
+                 let reminder = UNNotificationAction(identifier: NotificationAction.reminder.rawValue, title: "Reminder")
+                 
+                 let generalCategory = UNNotificationCategory(identifier: NotificationCategory.general.rawValue, actions: [reminder, dismiss], intentIdentifiers: [])
+                 
+                 center.setNotificationCategories([generalCategory])
+                 
+                 //add request to notification center
+                 center.add(request) { error in
+                     if let error = error {
+                         print(error)
+                     }
+                 }
+                 
+                 
 
-            } label: {
+             } label: {
                 Text("2초 뒤 알람 전송")
             }
             Spacer()
+            
+            Button {
+                for _ in 0..<viewModel.path.count {
+                    viewModel.path.removeLast()
+                }
+            } label: {
+                Text("Pop to root")
+            }
+            
+            
         }
         
         
@@ -177,8 +195,8 @@ struct NotiTestView: View {
     
 }
 
-struct NotiTestView_Previews: PreviewProvider {
-    static var previews: some View {
-        NotiTestView()
-    }
-}
+//struct NotiTestView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NotiTestView()
+//    }
+//}

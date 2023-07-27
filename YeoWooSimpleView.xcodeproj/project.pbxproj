@@ -46,6 +46,8 @@
 		D57ED3092A65400300670C31 /* FoxCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED3082A65400300670C31 /* FoxCardView.swift */; };
 		D57ED30B2A6551C800670C31 /* Fox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57ED30A2A6551C800670C31 /* Fox.swift */; };
 		D5DE2D262A67C8770075F14B /* NotiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE2D252A67C8770075F14B /* NotiView.swift */; };
+		D5EC77592A7156C1006B9114 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EC77582A7156C1006B9114 /* NavigationViewModel.swift */; };
+		D5EC776C2A72AE5A006B9114 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EC776B2A72AE5A006B9114 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		D57ED3082A65400300670C31 /* FoxCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxCardView.swift; sourceTree = "<group>"; };
 		D57ED30A2A6551C800670C31 /* Fox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fox.swift; sourceTree = "<group>"; };
 		D5DE2D252A67C8770075F14B /* NotiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiView.swift; sourceTree = "<group>"; };
+		D5EC77582A7156C1006B9114 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		D5EC776B2A72AE5A006B9114 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 				D57ED2BB2A612EE600670C31 /* Notification */,
 				D57ED2BC2A612EF700670C31 /* Role */,
 				D57ED2C02A612F5900670C31 /* Root */,
+				D5EC776A2A72AE4A006B9114 /* Button */,
 				D57ED2BD2A612EFE00670C31 /* Setting */,
 				D57ED2AD2A612EBC00670C31 /* YeoWooSimpleViewApp.swift */,
 				D57ED2AF2A612EBC00670C31 /* ContentView.swift */,
@@ -230,6 +235,7 @@
 		D57ED2C02A612F5900670C31 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				D5EC77572A7156AB006B9114 /* ViewModel */,
 				D57ED2C12A612F6500670C31 /* MainView.swift */,
 			);
 			path = Root;
@@ -282,6 +288,22 @@
 				D57ED2CF2A616D1400670C31 /* NotiCardView.swift */,
 			);
 			path = NotiKindOfView;
+			sourceTree = "<group>";
+		};
+		D5EC77572A7156AB006B9114 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5EC77582A7156C1006B9114 /* NavigationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D5EC776A2A72AE4A006B9114 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				D5EC776B2A72AE5A006B9114 /* ButtonView.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +393,7 @@
 				D575D8352A690FB80036BE7D /* Push.swift in Sources */,
 				D575D8412A6960880036BE7D /* NotificationHandler.swift in Sources */,
 				D575D8462A69FDA70036BE7D /* TravelSampleData.swift in Sources */,
+				D5EC776C2A72AE5A006B9114 /* ButtonView.swift in Sources */,
 				D57ED3092A65400300670C31 /* FoxCardView.swift in Sources */,
 				D560E6022A66600000422B6C /* NewAlbumView.swift in Sources */,
 				D57ED2C82A61307800670C31 /* NotificationView.swift in Sources */,
@@ -391,6 +414,7 @@
 				D57ED2C42A61305900670C31 /* MultiInvitationView.swift in Sources */,
 				D57ED2FC2A64444A00670C31 /* EditProfileRowView.swift in Sources */,
 				D560E6052A66635100422B6C /* GrayTitleMakingView.swift in Sources */,
+				D5EC77592A7156C1006B9114 /* NavigationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

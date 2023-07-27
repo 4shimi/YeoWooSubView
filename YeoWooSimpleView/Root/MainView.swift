@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    //뷰모델로 네비게이션 관리
+    @EnvironmentObject var viewModel : NavigationViewModel
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $viewModel.path) {
             VStack {
                 HStack {
                     Image("Title")
@@ -20,11 +24,13 @@ struct MainView: View {
 
                     Spacer()
                     
+                    CameraButton()
+                        .padding(.trailing)
+                    
                     NavigationLink {
                         RoleChangeView()
                             .navigationBarBackButtonHidden()
-                    }
-                    label : {
+                    } label : {
                         Image(systemName: "chevron.right.circle.fill")
                             .resizable()
                             .frame(width: 32, height: 32)
@@ -56,17 +62,19 @@ struct MainView: View {
                                     .overlay( Image(systemName: "bell.fill")
                                         .foregroundColor(.mainColor))
                             }
-                            NavigationLink{
+                            NavigationLink(value: 1) {
+                                label : do { Circle()
+                                        .foregroundColor(.white)
+                                        .frame(width: 48, height: 48)
+                                        .shadow(radius: 20)
+                                        .overlay( Image(systemName: "gear")
+                                            .imageScale(.large)
+                                            .foregroundColor(.mainColor))
+                                }
+                            }
+                            .navigationDestination(for: Int.self) { _ in
                                 SettingView()
                                     .navigationBarBackButtonHidden()
-                            } label: {
-                                Circle()
-                                    .foregroundColor(.white)
-                                    .frame(width: 48, height: 48)
-                                    .shadow(radius: 20)
-                                    .overlay( Image(systemName: "gear")
-                                        .imageScale(.large)
-                                        .foregroundColor(.mainColor))
                             }
                         }
                     }

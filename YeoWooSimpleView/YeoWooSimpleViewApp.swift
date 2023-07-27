@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct YeoWooSimpleViewApp: App {
     
-    
+    @ObservedObject var viewModel = NavigationViewModel.shared
     private var delegate: NotificationDelegate = NotificationDelegate()
     
     //알람 init
@@ -19,8 +19,7 @@ struct YeoWooSimpleViewApp: App {
         center.delegate = delegate
         center.requestAuthorization(options: [.alert, .sound, .badge]) { result, error in
             if let error = error {
-                print(error)
-                
+                print(error)                
             }
         }
     }
@@ -28,6 +27,7 @@ struct YeoWooSimpleViewApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }

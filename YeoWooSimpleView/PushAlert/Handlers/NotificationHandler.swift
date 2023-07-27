@@ -5,7 +5,7 @@
 //  Created by 정회승 on 2023/07/20.
 //
 
-import Foundation
+import SwiftUI
 import UserNotifications
 
 
@@ -34,3 +34,40 @@ class NotificationHandler {
     }
     
 }
+
+
+
+class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
+    
+    let viewModel = NavigationViewModel.shared
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        let userInfo = response.notification.request.content.userInfo
+        print(userInfo)
+        //바로 카메라로 가도록?
+        
+        Task {
+            try? await Task.sleep(nanoseconds: 100_000)
+            await self.viewModel.goRoot()
+        }
+      
+        completionHandler()
+    }
+ 
+        
+
+        
+    
+    //Can use yeowoo app in foreground states
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .sound, .badge])
+    }
+    
+    
+}
+
+
+
+
+

@@ -15,25 +15,25 @@ enum NotificationAction: String {
 enum NotificationCategory: String {
     case general
 }
-
-class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
-        let userInfo = response.notification.request.content.userInfo
-        print(userInfo)
-        //바로 카메라로 가도록?
-        
-        completionHandler()
-    }
-    
-    //Can use yeowoo app in foreground states
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.banner, .sound, .badge])
-    } 
-    
-    
-}
+//
+//class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
+//    
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//        
+//        let userInfo = response.notification.request.content.userInfo
+//        print(userInfo)
+//        //바로 카메라로 가도록?
+//        
+//        completionHandler()
+//    }
+//    
+//    //Can use yeowoo app in foreground states
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        completionHandler([.banner, .sound, .badge])
+//    } 
+//    
+//    
+//}
 
 struct PushTestView: View {
     
@@ -59,7 +59,7 @@ struct PushTestView: View {
                 //위에 userNotificaitonCenter didReceive func Check 용도
                 content.userInfo = ["먹방여우": "핀"]
                 
-                //create trigger(시간 랜덤? 예정) 지금은 버튼 누르고 5초 뒤
+                //create trigger(시간 랜덤? 예정) 지금은 버튼 누르고 2초 뒤
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2.0, repeats: false)
                 
                 
@@ -165,7 +165,7 @@ struct PushTestView: View {
                 
                 
                 
-                //create trigger(시간 랜덤? 예정) 지금은 버튼 누르고 5초 뒤
+                //create trigger(시간 랜덤? 예정) 지금은 버튼 누르고 2초 뒤
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2.0, repeats: false)
                 
                 

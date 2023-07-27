@@ -19,6 +19,9 @@ struct SettingView: View {
     //로그아웃  action sheet
     @State private var loggingOutSheet = false
     
+    //navigationLink뷰모델
+    @EnvironmentObject var viewModel: NavigationViewModel
+    
 
     
     
@@ -87,18 +90,20 @@ struct SettingView: View {
                                 .opacity(0.1)
                         }
                             .padding(.horizontal, 10 )
-                        NavigationLink { NotiTestView() }
-                    label: {
-                            HStack{
-                                Text("사진 촬영 알림 받기")
-                                    .font(.system(size: 16, weight: .regular, design: .default))
-                           
-                                Spacer()
-                                
-                                Toggle("", isOn: $notiToggle)
-                                    .toggleStyle(SwitchToggleStyle(tint: Color.mainColor))
-                                    .padding(.trailing, 20)
-                            }
+
+                        NavigationLink{
+                            NotiTestView()
+                        } label: {
+                                HStack{
+                                       Text("사진 촬영 알림 받기")
+                                            .font(.system(size: 16, weight: .regular, design: .default))
+                            
+                                       Spacer()
+                            
+                                       Toggle("", isOn: $notiToggle)
+                                            .toggleStyle(SwitchToggleStyle(tint: Color.mainColor))
+                                            .padding(.trailing, 20)
+                                        }
                         }
                     }
                     .modifier(CardViewModifier())
@@ -161,13 +166,10 @@ struct SettingView: View {
                                       .cancel(Text("취소"))
                                         ])
                         }
-
-                    
                 }
                 .padding(.bottom, 10)
                 
             }
-        
             .background(Color.whiteGray)
             .navigationTitle("MY")
             .navigationBarTitleDisplayMode(.inline)
