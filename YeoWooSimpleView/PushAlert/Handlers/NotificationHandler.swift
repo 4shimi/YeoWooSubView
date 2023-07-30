@@ -40,6 +40,7 @@ class NotificationHandler {
 class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
     
     let viewModel = NavigationViewModel.shared
+    let cameraButtonViewModel = CameraButtonViewModel.shared
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
@@ -50,6 +51,7 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
         Task {
             try? await Task.sleep(nanoseconds: 100_000)
             await self.viewModel.goRoot()
+            await self.cameraButtonViewModel.goCamera()
         }
       
         completionHandler()

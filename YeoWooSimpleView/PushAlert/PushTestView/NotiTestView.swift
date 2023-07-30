@@ -22,6 +22,8 @@ struct NotiTestView: View {
     //네비게이션 뷰모델
     @EnvironmentObject var viewModel: NavigationViewModel
     
+    @EnvironmentObject var cameraButtonViewModel: CameraButtonViewModel
+    
     let notify = NotificationHandler()
     
     var body: some View {
@@ -141,12 +143,12 @@ struct NotiTestView: View {
                  let content = UNMutableNotificationContent()
                  content.title = "YeoWoo"
                  
-                 print(Text("⚠️\(albumName)여행을 시작해요! 깜빡하지 마세요!"))
+                 let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                 let rnd = numbers.randomElement() ?? 0
+                 print(pushs[rnd].content)
                  
-                 content.body = "⚠️\(albumName)여행을 시작해요! 깜빡하지 마세요!"
+                 content.body = pushs[rnd].content
                  content.categoryIdentifier = NotificationCategory.general.rawValue
-                 //위에 userNotificaitonCenter didReceive func Check 용도
-                 content.userInfo = ["먹방여우": "핀"]
                  
                  //create trigger(시간 랜덤? 예정) 지금은 버튼 누르고 2초 뒤
                  let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2.0, repeats: false)
@@ -182,17 +184,18 @@ struct NotiTestView: View {
                 for _ in 0..<viewModel.path.count {
                     viewModel.path.removeLast()
                 }
+                
+                DispatchQueue.main.async {
+                    
+                    print("====camera on====")
+                    CameraButtonViewModel.shared.showModal = true
+                    print(cameraButtonViewModel.showModal)
+                }
             } label: {
                 Text("Pop to root")
             }
-            
-            
         }
-        
-        
     }
-    
-    
 }
 
 //struct NotiTestView_Previews: PreviewProvider {

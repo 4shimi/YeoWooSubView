@@ -22,8 +22,7 @@ struct SettingView: View {
     //navigationLink뷰모델
     @EnvironmentObject var viewModel: NavigationViewModel
     
-
-    
+    @EnvironmentObject var cameraButtonViewModel: CameraButtonViewModel
     
     var body: some View {
             //VStack 뷰
@@ -93,6 +92,7 @@ struct SettingView: View {
 
                         NavigationLink{
                             NotiTestView()
+                                .environmentObject(CameraButtonViewModel())
                         } label: {
                                 HStack{
                                        Text("사진 촬영 알림 받기")

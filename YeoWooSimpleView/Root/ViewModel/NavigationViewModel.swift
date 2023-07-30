@@ -22,9 +22,5 @@ class NavigationViewModel : ObservableObject {
                 self.path.removeLast()
             }
         }
-        
-        DispatchQueue.main.async {
-            print("turn on the camera")
-        }
     }
 }

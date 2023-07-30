@@ -15,8 +15,6 @@ struct NotificationView: View {
     
     @State private var selectedIndex: Int? = nil
 
-
-    
     var body: some View {
         
         //같은 날짜 배열값 딕셔너리

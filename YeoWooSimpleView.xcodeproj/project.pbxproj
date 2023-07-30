@@ -48,6 +48,7 @@
 		D5DE2D262A67C8770075F14B /* NotiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE2D252A67C8770075F14B /* NotiView.swift */; };
 		D5EC77592A7156C1006B9114 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EC77582A7156C1006B9114 /* NavigationViewModel.swift */; };
 		D5EC776C2A72AE5A006B9114 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EC776B2A72AE5A006B9114 /* ButtonView.swift */; };
+		D5EC776E2A72B76B006B9114 /* CameraButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EC776D2A72B76B006B9114 /* CameraButtonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		D5DE2D252A67C8770075F14B /* NotiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiView.swift; sourceTree = "<group>"; };
 		D5EC77582A7156C1006B9114 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		D5EC776B2A72AE5A006B9114 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		D5EC776D2A72B76B006B9114 /* CameraButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				D5EC776B2A72AE5A006B9114 /* ButtonView.swift */,
+				D5EC776D2A72B76B006B9114 /* CameraButtonViewModel.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				D575D8312A6821A50036BE7D /* PushTestView.swift in Sources */,
 				D560E60B2A6690CC00422B6C /* FindFriendContents.swift in Sources */,
 				D57ED2C22A612F6500670C31 /* MainView.swift in Sources */,
+				D5EC776E2A72B76B006B9114 /* CameraButtonViewModel.swift in Sources */,
 				D57ED2D02A616D1400670C31 /* NotiCardView.swift in Sources */,
 				D52ABD1B2A67D8E30036566A /* InvitationView.swift in Sources */,
 				D575D8352A690FB80036BE7D /* Push.swift in Sources */,
